@@ -1,0 +1,9 @@
+mixin card-service(img, title)
+  .card-service
+    .card-service__img
+      img(src=img)
+    .card-service__gradient
+    .card-service__info
+      .card-service__title=title
+      .card-service__description
+        block

@@ -1,0 +1,30 @@
+@import './_libs';
+@import './_vars';
+@import './_mixins.scss';
+@import './_fonts';
+
+// common styles
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: Roboto, serif;
+
+}
+h3 {
+  color: $gray;
+  font-size: 40px;
+  line-height: 47px;
+  font-weight: 700;
+}
+// end common styles
+
+@import './_imports';

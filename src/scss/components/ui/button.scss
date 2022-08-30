@@ -1,0 +1,45 @@
+.button {
+  width: max-content;
+  height: 55px;
+  width: 200px;
+  border-radius: 3px;
+  border: none;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 17px;
+  font-family: $font-family-montserrat;
+  font-weight: bold;
+  font-size: 16px;
+  //background: $grey;
+  //transition: 0.3s;
+
+  &--blue-white {
+    background-color: $blue;
+    color: white;
+    border: none;
+  }
+
+  &--white-blue {
+    background-color: white;
+    color: $blue;
+    border: none;
+  }
+
+  &--none-bc-white {
+    background-color: transparent;
+    color: white;
+    border: $white-border;
+  }
+
+  &--none-bc-blue {
+    background-color: transparent;
+    color: $blue;
+    border: $blue-border;
+  }
+
+  &--small-height {
+    height: 45px;
+    padding: 12px;
+  }
+
+}

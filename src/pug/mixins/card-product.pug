@@ -1,0 +1,11 @@
+mixin card-product(img, title, count)
+  .card-product
+    .card-product__img
+      img(src=img)
+    .card-product__gradient
+    .card-product__info
+      .card-product__title=title
+      .card-product__count=count
+        |  товаров
+      .card-product__description
+        block

@@ -1,0 +1,102 @@
+include ../mixins/test.pug
+include ../mixins/card-product.pug
+include ../mixins/card-service.pug
+include ../mixins/card-result.pug
+include ../mixins/card-staff.pug
+include ../mixins/card-support.pug
+include ../mixins/card-event.pug
+
+
+doctype html
+html(lang="en")
+
+head
+  meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  title Document
+
+body
+  .ui
+    button.button Подписаться
+    button.button.button--none-bc-white Подписаться
+    button.button.button--small-height Подписаться
+    button.button.button--white-blue Подписаться
+    button.button.button--blue-white Подписаться
+    button.button.button--none-bc-blue Подписаться
+    <br><br><br><br><br>
+    input.input(placeholder='Введите имя')
+    <br><br><br>
+    label.checkform-label
+      input.checkbox-input(type='checkbox' value='value1' checked="checked")
+      span.checkbox-checkmark
+        include ../../images/ui/checkbox/checkmark.svg
+      span.checkbox-span Текст. Товарные позиции со скидкой в этом месяце
+    <br><br><br>
+
+    .products__list
+      - let n = 0;
+        while n < 7
+          - let img = n % 2 ? './images/products/video-systems.png' : './images/products/v-systems.png'
+          +card-product(img, 'Системы видеонаблюдения', 12)
+            block card-product
+              p Система видеонаблюдения ИВЭ-Видео предназначена для организации видеонаблюдения на буровой установке и объекте ТКРС. Спроектрирована с учетом особых требований по бесперебойной работе.
+              p Система видеонаблюдения ИВЭ-Видео предназначена для организации видеонаблюдения на буровой установке и объекте ТКРС. Спроектрирована с учетом особых требований по бесперебойной работе.
+              p Система видеонаблюдения ИВЭ-Видео предназначена для организации видеонаблюдения на буровой установке и объекте ТКРС. Спроектрирована с учетом особых требований по бесперебойной работе.
+              p Система видеонаблюдения ИВЭ-Видео предназначена для организации видеонаблюдения на буровой установке и объекте ТКРС. Спроектрирована с учетом особых требований по бесперебойной работе.
+            - n++
+    <br><br>
+    <br><br>
+    .services__list
+      - let data = [{img: './images/services/repair-1.png', title: 'Обслуживание и ремонт'},{img: './images/services/learn-2.png', title: 'Обучение'},{img: './images/services/check-3.png', title: 'Проверка средств измерений'},{img: './images/services/cloud-service-4.png', title: 'Облачный сервис'}]
+      each el in data
+        +card-service(el.img, el.title)
+          block card-service
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+    <br><br>
+    <br><br>
+
+
+    .result__list
+      - let dataResult = [{img: './images/result/result-1.png', title: 'Цифровой ТКРС'},{img: './images/result/result-2.png', title: 'Цифровое Бурение'},{img: './images/result/result-3.png', title: 'Цифровая скважина'}]
+      each el in dataResult
+        +card-result(el.img, el.title)
+    <br><br>
+    <br><br>
+
+    .staff__list
+      - let dataStaff = [{img: './images/staff/2.png'},{img: './images/staff/3.png'},{img: './images/staff/1.png'},{img: './images/staff/4.png'},{img: './images/staff/5.png'},{img: './images/staff/6.png'}]
+      each el in dataStaff
+        +card-staff(el.img)
+
+    <br><br>
+    <br><br>
+
+    .support__list
+      - let dataSupport = [{img: './images/support/support-1.png', title: 'ИВЭ-50', description: 'Техническая поддержка'}, {img: './images/support/support-2.png', title: 'ИВЭ-70', description: 'Программное обеспечение'}]
+      each el in dataSupport
+        +card-support(el.img, el.title, el.description)
+
+    <br><br>
+    <br><br>
+
+    .event__list
+      - let dataEvent = [{img: './images/support/support-1.png', title: 'ИВЭ-50', description: 'Техническая поддержка'}, {img: './images/support/support-2.png', title: 'ИВЭ-70', description: 'Программное обеспечение'}]
+      each el in dataEvent
+        +card-event(el.img, el.title, el.description)
+          block block-events
+
+    <br><br>
+    <br><br>
+    +test('имя', 'алах акбар')
+      block info
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aspernatur.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aspernatur.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aspernatur.
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aspernatur.
+  //.ui
+  //  a.partner
+  //    img(src=require("../../images/partners/gazprom.png"))
