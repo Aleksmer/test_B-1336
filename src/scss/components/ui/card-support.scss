@@ -57,22 +57,13 @@
 
   &__title {
     display: flex;
-    font-family: $font-family-montserrat;
-    font-size: 112px;
-    font-weight: bold;
-    line-height: 136px;
     color: white;
-    letter-spacing: 0.05em;
+    margin: 0;
   }
 
   &__description {
     display: flex;
     flex-direction: column;
-    font-family: $font-family-roboto;
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: 700;
     color: white;
-    letter-spacing: 0.1em;
   }
 }

@@ -4,8 +4,8 @@ mixin card-product(img, title, count)
       img(src=img)
     .card-product__gradient
     .card-product__info
-      .card-product__title=title
-      .card-product__count=count
+      h5.card-product__title=title
+      h6.card-product__count=count
         |  товаров
-      .card-product__description
+      h6.card-product__description
         block

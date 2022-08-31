@@ -1,4 +1,3 @@
-include ../mixins/test.pug
 include ../mixins/card-product.pug
 include ../mixins/card-service.pug
 include ../mixins/card-result.pug
@@ -23,7 +22,28 @@ body
     button.button.button--white-blue Подписаться
     button.button.button--blue-white Подписаться
     button.button.button--none-bc-blue Подписаться
-    <br><br><br><br><br>
+    <br><br><br><br>
+
+    .slider-button
+      include ../../images/ui/slider-buttons/left.svg
+    .slider-button.slider-button--left-blue
+      include ../../images/ui/slider-buttons/left.svg
+    .slider-button.slider-button--left-white
+      include ../../images/ui/slider-buttons/left.svg
+    .slider-button.slider-button--right-blue
+      include ../../images/ui/slider-buttons/right.svg
+    .slider-button.slider-button--right-white
+      include ../../images/ui/slider-buttons/right.svg
+    <br><br><br>
+
+    .slider-dot--small
+    .slider-dot--big
+
+    <br><br>
+
+
+
+    <br><br>
     input.input(placeholder='Введите имя')
     <br><br><br>
     label.checkform-label
@@ -32,7 +52,6 @@ body
         include ../../images/ui/checkbox/checkmark.svg
       span.checkbox-span Текст. Товарные позиции со скидкой в этом месяце
     <br><br><br>
-
     .products__list
       - let n = 0;
         while n < 7
@@ -58,23 +77,18 @@ body
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
     <br><br>
     <br><br>
-
-
     .result__list
       - let dataResult = [{img: './images/result/result-1.png', title: 'Цифровой ТКРС'},{img: './images/result/result-2.png', title: 'Цифровое Бурение'},{img: './images/result/result-3.png', title: 'Цифровая скважина'}]
       each el in dataResult
         +card-result(el.img, el.title)
     <br><br>
     <br><br>
-
     .staff__list
       - let dataStaff = [{img: './images/staff/2.png'},{img: './images/staff/3.png'},{img: './images/staff/1.png'},{img: './images/staff/4.png'},{img: './images/staff/5.png'},{img: './images/staff/6.png'}]
       each el in dataStaff
         +card-staff(el.img)
-
     <br><br>
     <br><br>
-
     .support__list
       - let dataSupport = [{img: './images/support/support-1.png', title: 'ИВЭ-50', description: 'Техническая поддержка'}, {img: './images/support/support-2.png', title: 'ИВЭ-70', description: 'Программное обеспечение'}]
       each el in dataSupport
@@ -82,21 +96,22 @@ body
 
     <br><br>
     <br><br>
-
     .event__list
-      - let dataEvent = [{img: './images/support/support-1.png', title: 'ИВЭ-50', description: 'Техническая поддержка'}, {img: './images/support/support-2.png', title: 'ИВЭ-70', description: 'Программное обеспечение'}]
-      each el in dataEvent
-        +card-event(el.img, el.title, el.description)
-          block block-events
+      - let description_1 = 'Участие в технологической сессии «Инновационные решения в области капитального ремонта скважин» на Тюменском нефтегазовом форуме 2021, г. Тюмень, Технопарк'
+      - let description_2 = 'С днем работников нефтяной, газовой и топливной промышленности!'
+      - let description_3 = 'Публикация к 30-летию ПАО ЛУКОЙЛ в федеральном деловом журнале ТСР.'
+      - let description_4 = 'Участие в выездной конференции ООО «РН-Сервис» - «Внедрение новых видов оборудования, техники и технологий при производстве работ по текущему и капитальному ремонту, освоению и испытанию нефтяных и газовых скважин»'
 
+      - let dataEvent = [{img: './images/events/1.png',dateX: '17 сентября 2021', description: description_1}, {img: './images/events/2.png', dateX: '3 сентября 2021', description: description_2},{img: './images/events/3.png', dateX: '26 августа 2021', description: description_3},{img: './images/events/4.png', dateX: '30 июля 2021', description: description_4}, ]
+      each el in dataEvent
+        +card-event(el.img, el.dateX, el.description)
     <br><br>
     <br><br>
-    +test('имя', 'алах акбар')
-      block info
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aspernatur.
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aspernatur.
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aspernatur.
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aspernatur.
-  //.ui
-  //  a.partner
-  //    img(src=require("../../images/partners/gazprom.png"))
+    h1 ИВЭ-50
+    h2 ИВЭ-50
+    h3 ИВЭ-50
+    h4 ИВЭ-50
+    h5 ИВЭ-50
+    h6 ИВЭ-50
+
+

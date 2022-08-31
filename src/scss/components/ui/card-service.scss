@@ -9,8 +9,8 @@
   position: relative;
 
   &:hover > .card-service__info {
-    margin-top: 0;
-    padding: 40px 15px 20% 27px;
+    top: 0;
+    padding: 40px 15px 25px 27px;
     height: 100%;
     background-color: $aqua;
     opacity: 0.8;
@@ -52,21 +52,21 @@
 
   &__info {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
-    padding: 0 15px 24px 27px;
-    margin-top: 97%;
+    height: 100%;
+    padding: 0 15px 25px 27px;
+    //margin-top: 100%;
     z-index: 2;
     opacity: 0.9;
     transition: .5s;
+    top: 75%;
   }
 
   &__title {
     display: flex;
-    font-family: $font-family-roboto;
-    //color: $blue;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 28px;
     margin-top: 33px;
     color: white;
     letter-spacing: 0.05em;

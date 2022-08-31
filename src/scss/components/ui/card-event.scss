@@ -3,13 +3,14 @@
   flex-direction: column;
   width: 100%;
   height: border-box;
-  overflow: hidden;
+  //overflow: hidden;
   justify-content: start;
   align-items: start;
   position: relative;
 
   &__img {
     min-width: 100%;
+    position: relative;
     display: flex;
     justify-content: center;
 
@@ -31,13 +32,12 @@
   }
 
   &__info {
-    position: absolute;
     display: flex;
     flex-direction: column;
     height: auto;
-    bottom: 0;
+    top: 100%;
     width: 100%;
-    margin: auto 40px 50px 110px;
+    padding: 20px 25px 10px 0;
     z-index: 2;
     opacity: 0.9;
     transition: .5s;
@@ -45,22 +45,17 @@
 
   &__date {
     display: flex;
-    font-family: $font-family-montserrat;
-    font-size: 112px;
-    font-weight: bold;
-    line-height: 136px;
-    color: white;
-    letter-spacing: 0.05em;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: $gray-999;
   }
 
   &__description {
     display: flex;
     flex-direction: column;
     font-family: $font-family-roboto;
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: 700;
-    color: white;
-    letter-spacing: 0.1em;
+    color: black;
+    margin-top: 13px;
   }
 }

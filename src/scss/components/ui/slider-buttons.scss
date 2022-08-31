@@ -1,0 +1,75 @@
+.slider-button {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 7px;
+    height: 13px;
+  }
+
+  &--left-blue {
+    border: none;
+    background-color: $blue;
+
+    path {
+      fill: white;
+    }
+  }
+
+  &--left-white {
+
+    border: $blue-border-thin;
+    background-color: transparent;
+
+    path {
+      fill: $blue;
+    }
+  }
+
+  &--right-blue {
+    border: none;
+    background-color: $blue;
+
+    path {
+      fill: white;
+    }
+  }
+
+  &--right-white {
+    border: $blue-border-thin;
+    background-color: transparent;
+
+    path {
+      fill: $blue;
+    }
+  }
+}
+
+
+
+
+
+.slider-dot {
+  width: 7px;
+  height: 7px;
+  border: $blue-border-thin;
+  border-radius: 3.5px;
+
+  &--small {
+    width: 7px;
+    height: 7px;
+    border: $blue-border-thin;
+    border-radius: 3.5px;
+  }
+
+  &--big {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: $blue;
+  }
+}

@@ -1,9 +1,8 @@
-mixin card-event(img, date)
+mixin card-event(img, dateX, description)
   .card-event
     .card-event__img
       img(src=img)
-    .card-event__gradient
+      .card-event__gradient
     .card-event__info
-      .card-event__date=date
-      .card-event__description
-        block
+      h6.card-event__date=dateX
+      h6.card-event__description=description
