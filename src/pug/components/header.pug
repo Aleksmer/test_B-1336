@@ -2,6 +2,11 @@ header.header
   hr.header__hr-line
   .container
     .header__top-line
+      .header__left-block
+        .header__left-block__menu
+          include ../../images/header/line.svg
+        .header__left-block__label
+          include ../../images/header/label.svg
       .header__mail-block
         .header__mail-block__img
           include ../../images/header/mail.svg
@@ -13,18 +18,10 @@ header.header
         .header__phone-block--mobile
           a(href="tel:+73422581336")
             include ../../images/header/phone.svg
-
       h6.header__callback-block Заказать звонок
       .header__search
         include ../../images/header/search.svg
-
-
     .header__bottom-line
-      .header__mobile-block
-        .header__mobile-menu
-          include ../../images/header/line.svg
-        .header__label
-          include ../../images/header/label.svg
       .header__menu
         .header__menu__list
           a(href="#") Компания
@@ -37,20 +34,3 @@ header.header
           a(href="#") Новости
         .header__menu__quest-form
           h6 Опросный лист
-
-
-//&__top-line {
-//a {
-//&__mail-block {
-//&__img {
-//&__phone-block {
-//&__img {
-//&__callback-block {
-//&__bottom-line {
-//&__mobile-block {
-//&__mobile-menu {
-//&__label {
-//&__menu {
-//&__list {
-//a {
-//&__quest-form {
