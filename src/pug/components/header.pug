@@ -1,14 +1,56 @@
 header.header
-  |это шапка
+  hr.header__hr-line
   .container
     .header__top-line
       .header__mail-block
-        include ../../images/ui/slider-buttons/left.svg
-
-
+        .header__mail-block__img
+          include ../../images/header/mail.svg
+        a(href="mailto:info@v-1336.ru") info@v-1336.ru
       .header__phone-block
-        include ../../images/ui/slider-buttons/left.svg
-      .header__callback-block
+        .header__phone-block--desktop
+          include ../../images/header/phone.svg
+          a(href="tel:+73422581336") +7 (342) 258-13-36
+        .header__phone-block--mobile
+          a(href="tel:+73422581336")
+            include ../../images/header/phone.svg
+
+      h6.header__callback-block Заказать звонок
+      .header__search
+        include ../../images/header/search.svg
+
+
     .header__bottom-line
+      .header__mobile-block
+        .header__mobile-menu
+          include ../../images/header/line.svg
+        .header__label
+          include ../../images/header/label.svg
+      .header__menu
+        .header__menu__list
+          a(href="#") Компания
+          a(href="#") Продукция
+          a(href="#") Сертификаты
+          a(href="#") Услуги
+          a(href="#") Техподдержка
+          a(href="#") Програмное обеспечение
+          a(href="#") Проекты
+          a(href="#") Новости
+        .header__menu__quest-form
+          h6 Опросный лист
 
 
+//&__top-line {
+//a {
+//&__mail-block {
+//&__img {
+//&__phone-block {
+//&__img {
+//&__callback-block {
+//&__bottom-line {
+//&__mobile-block {
+//&__mobile-menu {
+//&__label {
+//&__menu {
+//&__list {
+//a {
+//&__quest-form {
