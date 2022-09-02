@@ -3,8 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(61, 61, 61, 0.2);
-  background-color: cadetblue;
+  background-color: rgba(61, 61, 61, 0.6);
 
   &__hr-line {
     display: flex;
@@ -22,12 +21,6 @@
     width: 100%;
     height: 55px;
     justify-content: end;
-
-    //&:not(:last-child) {
-    //  margin-right: 70px;
-    //  background-color: red;
-    //  border: 2px solid black;
-    //}
 
     a {
       font-family: $font-family-montserrat;
@@ -66,7 +59,6 @@
       path {
         fill: white;
       }
-
     }
   }
 
@@ -169,6 +161,10 @@
       font-weight: 700;
       color: white;
       margin-left: 20px;
+
+      h6 {
+        z-index: 99;
+      }
     }
   }
 }
@@ -177,7 +173,7 @@
   .header {
     position: absolute;
     width: 100%;
-    padding: 0 20px;
+    //padding: 0 20px;
   }
 }
 
@@ -198,7 +194,7 @@
         margin-right: 50px;
 
         line {
-          stroke: $blue;
+          stroke: white;
         }
       }
 
@@ -212,10 +208,10 @@
 
     &__top-line {
       height: 63px;
-      background-color: white;
+      background-color: rgba(61, 61, 61, 0.6);
 
       path {
-        fill: $blue;
+        fill: white;
       }
     }
 
@@ -299,9 +295,40 @@
 @media (max-width: 1020px) {
   .header {
     height: 63px;
+    background-color: white;
 
     &__hr-line {
       display: none;
+    }
+
+    &__top-line {
+      background-color: white;
+    }
+
+    &__left-block {
+      &__menu {
+        line {
+          stroke: $blue;
+        }
+      }
+
+      &__label {
+        path {
+          fill: $blue;
+        }
+      }
+    }
+
+    &__phone-block--mobile {
+      path {
+        fill: $blue;
+      }
+    }
+
+    &__search {
+      path {
+        fill: $blue;
+      }
     }
 
     &__bottom-line {
