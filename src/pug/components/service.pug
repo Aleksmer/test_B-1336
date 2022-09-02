@@ -1,0 +1,19 @@
+include ../mixins/card-service.pug
+
+section.service
+  .container
+    span.service__slogan Помогаем развивать бизнес
+    .service__header
+      h3.service__title Услуги
+      h6.service__all Все услуги &nbsp;&nbsp;&nbsp;>
+    h4.service__description Специализируемся на услугах для малого и среднего бизнеса. Проектируем помещения, внедряем CRM-системы в процессы и устанавливаем системы видеонаблюдения в коммерческие помещения
+    .services__list
+      - let data = [{img: './images/services/repair-1.png', title: 'Обслуживание и ремонт'},{img: './images/services/learn-2.png', title: 'Обучение'},{img: './images/services/check-3.png', title: 'Проверка средств измерений'},{img: './images/services/cloud-service-4.png', title: 'Облачный сервис'}]
+      each el in data
+        +card-service(el.img, el.title)
+          block card-service
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?

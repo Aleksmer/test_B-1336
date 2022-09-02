@@ -3,8 +3,6 @@
 @import './_mixins.scss';
 @import './_fonts';
 
-// common styles
-
 * {
   padding: 0;
   margin: 0;
@@ -25,27 +23,24 @@ body {
 }
 
 .container {
-  width: 1600px;
+  max-width: 1600px;
+  width: 100%;
+  padding-inline: 20px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  //background-color: gray;
 }
 
 ul {
   list-style-type: none;
 }
-
-// end common styles
-
-@import './_imports';
-
 @media (max-width: 1630px) {
   .container {
     min-width: 100%;
     width: auto;
     padding: 0 20px;
-    //z-index: 999;
-    //background-color: red;
   }
 }
+
+// end common styles
+@import './_imports';

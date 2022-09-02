@@ -1,0 +1,35 @@
+.advantages__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  width: 100%;
+  gap: 50px;
+}
+
+.card-advantages {
+  display: grid;
+  grid-template-columns: 100px auto;
+
+  &__img {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    min-width: 280px;
+  }
+
+  &__title {
+  }
+
+  &__description {
+    font-family: $font-family-montserrat;
+    font-size: 18px;
+    color: $gray;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+}

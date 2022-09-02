@@ -1,0 +1,7 @@
+include ../mixins/card-advantages.pug
+
+section.advantages
+  .container.advantages__list
+    - let dataAdvantages = [{img: '../../images/advantages/1.svg', title: '> 30 лет', description: 'работаем на рынке нефтегазовой отрасли'}, {img: '../../images/advantages/2.svg', title: '> 70%', description: 'подъемных агрегатов ТКРС в РФ оснащены ИВЭ-50'}, {img: '../../images/advantages/3.svg', title: '> 60%', description: 'буровых установок в РФ оснащены ИВЭ-50'}, {img: '../../images/advantages/4.svg', title: '> 3000', description: 'добывающих скважин в системе ASC iWell'}, {img: '../../images/advantages/5.svg', title: '> 2500', description: 'бригад бурения и ТКРС в системе мониторинга ASC'}, ]
+    each el in dataAdvantages
+      +card-advantages(el.img, el.title, el.description)
