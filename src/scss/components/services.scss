@@ -1,14 +1,15 @@
 .services__list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 33px;
   width: 100%;
+  margin-top: 50px;
 }
 
 .service {
 
   &__content {
-    margin: 100px 0;
+    margin: 50px 0;
   }
 
   &__slogan {
@@ -56,7 +57,6 @@
   justify-content: start;
   align-items: start;
   position: relative;
-  margin-top: 50px;
 
   &:hover > .card-service__info {
     top: 0;
@@ -96,7 +96,6 @@
     height: 100%;
     position: absolute;
     background: linear-gradient(rgba(0, 63, 104, 0), rgba(0, 63, 104, 0.64), rgba(0, 63, 104, 1));
-    //z-index: 5;
     opacity: .3;
   }
 
@@ -156,5 +155,18 @@
       border-radius: 2px;
       border: 3px solid $extra-gray;
     }
+  }
+}
+
+@media (max-width: 1025px) {
+  .card-service {
+    //display: flex;
+    //flex-direction: column;
+    //width: 100%;
+    height: 350px
+    //overflow: hidden;
+    //justify-content: start;
+    //align-items: start;
+    //position: relative;
   }
 }

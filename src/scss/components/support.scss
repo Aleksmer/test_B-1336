@@ -1,23 +1,26 @@
 .support__content {
-  margin: 100px 0;
+  margin: 50px 0;
 }
 
 .support__list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns:  repeat(auto-fit, minmax(350px, 1fr));
   width: 100%;
   gap: 30px;
+  margin-top: 64px;
 }
+
 .card-support {
   display: flex;
   flex-direction: column;
   width: 100%;
+  //min-width: 350px;
   height: border-box;
   overflow: hidden;
   justify-content: start;
-  align-items: start;
+  align-items: center;
   position: relative;
-  margin-top: 64px;
+
 
   &__img {
     min-width: 100%;
@@ -63,18 +66,41 @@
     path {
       stroke: white;
     }
-
   }
 
   &__title {
     display: flex;
     color: white;
     margin: 0;
+    font-size: 80px;
   }
 
   &__description {
     display: flex;
     flex-direction: column;
     color: white;
+    min-width: 300px;
+  }
+}
+
+
+@media (max-width: 1020px) {
+  .card-support {
+    &__label {
+      margin-bottom: 0px;
+      img {
+        height: 60px;
+        width: 60px;
+      }
+    }
+
+    &__title {
+      font-size: 60px;
+      line-height: 80px;
+    }
+
+    &__description {
+      font-size: 20px;
+    }
   }
 }
