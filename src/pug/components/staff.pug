@@ -2,14 +2,13 @@ include ../mixins/card-staff.pug
 
 section.staff
   .container
-
-    span.staff__slogan Люди, которые всегда помогут
-    .staff__header
-      h3.staff__title Сотрудники
-      h6.staff__all Все сотрудники &nbsp;&nbsp;&nbsp;>
-    span.staff__description Сотрудники — ключевое звено нашей компании. У нас работают специалисты узкого и широкого профиля, что позволяет обеспечить комплексный подход к решению ваших задач. Они знают, в каком направлении двигаться для достижения нужного результата. Свяжитесь с сотрудниками по контактам из карточек специалистов. Начните действовать уже сегодня!
-
-    .staff__list
-      - let dataStaff = [{img: './images/staff/2.png'},{img: './images/staff/3.png'},{img: './images/staff/1.png'},{img: './images/staff/4.png'},{img: './images/staff/5.png'},{img: './images/staff/6.png'}]
-      each el in dataStaff
-        +card-staff(el.img)
+    .staff__content
+      span.staff__slogan Люди, которые всегда помогут
+      .staff__header
+        h3.staff__title Сотрудники
+        h6.staff__all Все сотрудники &nbsp;&nbsp;&nbsp;>
+      span.staff__description Сотрудники — ключевое звено нашей компании. У нас работают специалисты узкого и широкого профиля, что позволяет обеспечить комплексный подход к решению ваших задач. Они знают, в каком направлении двигаться для достижения нужного результата. Свяжитесь с сотрудниками по контактам из карточек специалистов. Начните действовать уже сегодня!
+      .staff__list
+        - let dataStaff = [{img: './images/staff/2.png'},{img: './images/staff/3.png'},{img: './images/staff/1.png'},{img: './images/staff/4.png'},{img: './images/staff/5.png'},{img: './images/staff/6.png'}]
+        each el in dataStaff
+          +card-staff(el.img)

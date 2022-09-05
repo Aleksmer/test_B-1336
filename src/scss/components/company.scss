@@ -1,0 +1,135 @@
+.company {
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  max-height: 800px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(106.36deg, #FFFFFF -17.77%, rgba(255, 255, 255, 0) 61.35%), #C6E1EB;
+
+  &__background {
+    width: 100%;
+    height: 575px;
+    background-position: top;
+    background-image: url("./../images/company/bg-company.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__slogan {
+    font-family: $font-family-montserrat;
+    font-size: 13px;
+    line-height: 16px;
+    color: $gray-999;
+    font-weight: 400;
+    margin-top: 80px;
+  }
+
+  &__content-block {
+    display: grid;
+    grid-template-columns: 500px auto;
+  }
+
+  &__title-block {
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 16px;
+  }
+
+  &__buttons-block {
+  }
+
+
+  &__text-block {
+  }
+
+  &__description {
+    font-family: $font-family-montserrat;
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray-666;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-top: 23px;
+  }
+
+  &__equipment, .equipment {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+
+    &__item {
+    }
+
+    &__img {
+    }
+
+    &__text {
+      font-family: $font-family-montserrat;
+      font-size: 16px;
+      line-height: 19px;
+      color: black;
+      font-weight: 500;
+      letter-spacing: 0;
+      margin-top: 23px;
+    }
+  }
+
+  &__buttons {
+
+    &--desktop-visible {
+      margin-top: 55px;
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+    }
+
+    &--more-info {
+      margin-right: 20px;
+      text-transform: none;
+      width: 180px;
+    }
+
+    &--mobile-visible {
+      margin-top: 55px;
+      display: none;
+      flex-direction: row;
+      justify-content: start;
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .company {
+    &__content-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__text-block {
+      margin-top: 20px;
+    }
+
+    &__buttons {
+
+      &--desktop-visible {
+        display: none;
+      }
+
+      &--more-info {
+      }
+
+      &--mobile-visible {
+        display: flex;
+      }
+    }
+  }
+
+}

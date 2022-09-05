@@ -1,7 +1,12 @@
+.support__content {
+  margin: 100px 0;
+}
+
 .support__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
+  gap: 30px;
 }
 .card-support {
   display: flex;
@@ -12,6 +17,7 @@
   justify-content: start;
   align-items: start;
   position: relative;
+  margin-top: 64px;
 
   &__img {
     min-width: 100%;

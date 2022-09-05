@@ -1,0 +1,77 @@
+.request {
+  width: 100%;
+  height: auto;
+  background-image: url("./../images/request/bg-request.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__slogan {
+    font-family: $font-family-montserrat;
+    font-size: 13px;
+    line-height: 16px;
+    color: $gray-999;
+    font-weight: 400;
+    margin-top: 130px;
+  }
+
+  &__content-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+  }
+
+  &__title-block {
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 16px;
+  }
+
+  &__description {
+    font-family: $font-family-montserrat;
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray-666;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-top: 23px;
+  }
+
+  &__valid-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 130px;
+
+    :not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__button--send {
+    text-transform: none;
+    font-family: $font-family-montserrat;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+}
+
+
+@media (max-width: 1020px) {
+  .request {
+    &__content-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    &__valid-block {
+      margin-top: 50px;
+    }
+  }
+}

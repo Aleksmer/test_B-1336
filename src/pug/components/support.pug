@@ -2,8 +2,9 @@ include ../mixins/card-support.pug
 
 section.support
   .container
-    h3.support__title Сервис
-    .support__list
-      - let dataSupport = [{img: './images/support/support-1.png', title: 'ИВЭ-50', description: 'Техническая поддержка'}, {img: './images/support/support-2.png', title: 'ИВЭ-70', description: 'Программное обеспечение'}]
-      each el in dataSupport
-        +card-support(el.img, el.title, el.description)
+    .support__content
+      h3.support__title Сервис
+      .support__list
+        - let dataSupport = [{img: './images/support/support-1.png', title: 'ИВЭ-50', description: 'Техническая поддержка'}, {img: './images/support/support-2.png', title: 'ИВЭ-70', description: 'Программное обеспечение'}]
+        each el in dataSupport
+          +card-support(el.img, el.title, el.description)
