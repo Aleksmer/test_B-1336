@@ -1,0 +1,53 @@
+include ../mixins/slider.pug
+
+.slider-1
+  .slider-2
+     - let data = [{title: '.'},{title: '.'},{title: '.'}]
+     each el in data
+       .slider-3
+         +slider(el.title)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//
+//.slider
+//  <!-- Swiper -->
+//  .swiper-container
+//    ul.swiper-wrapper
+//      li.swiper-slide Slide 1
+//      li.swiper-slide Slide 2
+//      li.swiper-slide Slide 3
+//      li.swiper-slide Slide 4
+//      li.swiper-slide Slide 5
+//      li.swiper-slide Slide 6
+//      li.swiper-slide Slide 7
+//      li.swiper-slide Slide 8
+//      li.swiper-slide Slide 9
+//      li.swiper-slide Slide 10
+//    .swiper-pagination
+//    .swiper-button-prev
+//      include ../../images/sliders/left.svg
+//    .swiper-button-next
+//      include ../../images/sliders/right.svg

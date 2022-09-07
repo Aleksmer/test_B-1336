@@ -45,7 +45,6 @@
 
       &:hover {
         color: $gray;
-        //border: $gray-border-thin
 
         & > .menu__item__call-back {
           border: $gray-border-thin;
@@ -138,6 +137,14 @@
   color: $gray;
   border-top: $gray-border-thin;
   flex-wrap: wrap;
+
+  a {
+    text-decoration-line: none;
+    color: white;
+    &:hover {
+      color: $gray;
+    }
+  }
 
   &__customer {
     white-space: nowrap;

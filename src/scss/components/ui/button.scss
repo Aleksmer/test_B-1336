@@ -17,24 +17,44 @@
     background-color: $blue;
     color: white;
     border: none;
+    &:hover {
+      background-color: white;
+      color: $blue;
+      border: $blue-border;
+    }
   }
 
   &--white-blue {
     background-color: white;
     color: $blue;
     border: none;
+    &:hover {
+      background-color: $blue;
+      color: white;
+      border: none;
+    }
   }
 
   &--none-bc-white {
     background-color: transparent;
     color: white;
     border: $white-border;
+    &:hover {
+      background-color: $blue;
+      color: white;
+      border: none;
+    }
   }
 
   &--none-bc-blue {
     background-color: transparent;
     color: $blue;
     border: $blue-border;
+    &:hover {
+      background-color: $blue;
+      color: white;
+      border: none;
+    }
   }
 
   &--small-height {

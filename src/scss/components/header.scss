@@ -1,11 +1,23 @@
 .header {
   height: 150px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  //background-color: rgba(61, 61, 61, 0.6);
-  background-color: rgba(0,35,65,1);
+  //background-color: rgba(0, 35, 65, 1);
+  background: transparent;
   background-position: 50% 100%;
+  position: absolute;
+  top: 0;
+
+  a {
+    text-decoration-line: none;
+    transition: .2s;
+
+    &:hover {
+      color: $gray;
+    }
+  }
 
   &__hr-line {
     display: flex;
@@ -14,6 +26,10 @@
     top: 0;
     margin-top: 55px;
     opacity: 0.1;
+
+    &--bottom {
+      margin-top: 150px;
+    }
   }
 
   &__top-line {
@@ -152,32 +168,47 @@
       }
     }
 
-    &__quest-form {
-      height: 45px;
-      width: 175px;
-      border: $white-border;
-      border-radius: 3px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    &--button {
       font-weight: 700;
-      color: white;
-      margin-left: 20px;
-
-      h6 {
-        z-index: 99;
-      }
+      text-transform: lowercase;
+      background-color: yellow;
     }
   }
 }
 
-@media (max-width: 1630px) {
-  .header {
-    //position: absolute;
-    width: 100%;
-    //padding: 0 20px;
+.header__menu__button {
+  height: 45px;
+  width: 175px;
+  min-width: 170px;
+  border-radius: 3px;
+  border: none;
+  line-height: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: $font-family-roboto;
+  text-transform: none !important;
+  padding: 12px;
+  background-color: transparent;
+  color: white;
+  border: $white-border;
+  transition: .2s;
+  margin-left: 20px;
+
+  &:hover {
+    background-color: white;
+    color: $blue;
+    border: none;
+    padding: 13px;
   }
 }
+
+
+@media (max-width: 1630px) {
+  .header {
+    width: 100%;
+  }
+}
+
 
 @media (max-width: 1520px) {
   .header {
@@ -185,7 +216,13 @@
 
     &__hr-line {
       margin-top: 63px;
+
+
+      &--bottom {
+        margin-top: 130px;
+      }
     }
+
 
     &__left-block {
       top: 0;
@@ -210,7 +247,7 @@
 
     &__top-line {
       height: 63px;
-      background-color: rgba(61, 61, 61, 0.6);
+      //background-color: rgba(61, 61, 61, 0.6);
 
       path {
         fill: white;
@@ -273,7 +310,7 @@
   }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1170px) {
   .header {
     &__menu {
       &__list {
@@ -294,7 +331,7 @@
   }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1050px) {
   .header {
     height: 63px;
     background-color: white;
@@ -304,7 +341,7 @@
     }
 
     &__top-line {
-      background-color: white;
+
     }
 
     &__left-block {
