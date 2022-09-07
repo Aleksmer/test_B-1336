@@ -9,53 +9,20 @@ section.service
         h6.service__all Все услуги &nbsp;&nbsp;&nbsp;>
       h4.service__description Специализируемся на услугах для малого и среднего бизнеса. Проектируем помещения, внедряем CRM-системы в процессы и устанавливаем системы видеонаблюдения в коммерческие помещения
       .services__list
-        - let data = [{img: './images/services/repair-1.png', title: 'Обслуживание и ремонт'},{img: './images/services/learn-2.png', title: 'Обучение'},{img: './images/services/check-3.png', title: 'Проверка средств измерений'},{img: './images/services/cloud-service-4.png', title: 'Облачный сервис'}]
-        each el in data
-          +card-service(el.img, el.title)
-            block card-service
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
-
-
-
-
-
-
-
-
-
-
-
-              //block li
-              //.swiper-pagination
-              //.swiper-button-prev
-              //  include ../../images/sliders/left.svg
-              //.swiper-button-next
-              //  include ../../images/sliders/right.svg
-              //block li
-
-              // - let data = [{img: './images/staff/1.png'},{img: './images/staff/2.png'},{img: './images/staff/3.png'},{img: './images/staff/4.png'},{img: './images/staff/5.png'},{img: './images/staff/6.png'}]
-
-
-
-
-
-
-              //.swiper-container
-                //  .swiper-wrapper
-                //    .swiper-slide
-                //      img(src="./images/jaba.png")
-                //    .swiper-slide
-                //      img(src="./images/jaba.png")
-                //    .swiper-slide
-                //      img(src="./images/jaba.png")
-                //    .swiper-slide
-                //      img(src="./images/jaba.png")
-                //
-                //  .swiper-button-prev
-                //  .swiper-button-next
-
-
+        .swiper-container.swiper-container-service
+          .swiper-wrapper
+            - let data = [{img: './images/services/repair-1.png', title: 'Обслуживание и ремонт'},{img: './images/services/learn-2.png', title: 'Обучение'},{img: './images/services/check-3.png', title: 'Проверка средств измерений'},{img: './images/services/cloud-service-4.png', title: 'Облачный сервис'}]
+            each el in data
+              .swiper-slide
+              +card-service(el.img, el.title)
+                block card-service
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+        .swiper-pagination
+        .swiper-button-prev.swiper-button-prev-service
+          include ../../images/sliders/left.svg
+        .swiper-button-next.swiper-button-next-service
+          include ../../images/sliders/right.svg
