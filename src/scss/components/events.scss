@@ -8,6 +8,13 @@
 
 .event {
 
+  &--desktop {
+    display: flex
+  }
+  &--mobile {
+    display: none
+  }
+
   &__content {
     margin: 50px 0;
   }
@@ -116,5 +123,30 @@
     font-family: $font-family-roboto;
     color: black;
     margin-top: 13px;
+  }
+}
+
+@include tablet {
+  .event--desktop {
+    display: none
+  }
+  .event--mobile {
+    display: flex;
+
+    .swiper-container-event {
+      padding-bottom: 50px;
+    }
+
+    #button-prev-event,
+    #button-next-event {
+      top: auto;
+      bottom: 0;
+      right: 30px;
+    }
+
+    #button-prev-event {
+      left: auto;
+      right: 70px;
+    }
   }
 }

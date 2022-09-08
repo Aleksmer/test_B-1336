@@ -165,4 +165,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 });
+/*events*/
+document.addEventListener("DOMContentLoaded", () => {
+  new Swiper('.swiper-container-event', {
+    spaceBetween: 20,
+    slidesPerView: 1,
+    slidesOffsetAfter: 0,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      prevEl: '#button-prev-event',
+      nextEl: '#button-next-event',
+    },
+    keyboard: {
+      enabled: true,
+      onlyInVieport: true,
+      pageUpDown: true
+    },
+    grabCursor: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1.2,
+      },
+    }
+  })
+});
 

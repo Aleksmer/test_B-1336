@@ -13,7 +13,6 @@ section.result
           .swiper-wrapper
             - let dataResult = [{img: './images/result/result-1.png', title: 'Цифровой ТКРС'},{img: './images/result/result-2.png', title: 'Цифровое Бурение'},{img: './images/result/result-3.png', title: 'Цифровая скважина'}]
             each el in dataResult
-              //.swiper-slide
               +card-result(el.img, el.title)
           .swiper-pagination
           .swiper-button-prev.swiper-button-prev-result

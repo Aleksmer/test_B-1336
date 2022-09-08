@@ -1,40 +1,42 @@
 include ../mixins/card-event.pug
 
-//section.event
-//  .container
-//    .event__content
-//      span.event__slogan Новости
-//      .event__header
-//        h3.event__title События компании
-//        h6.event__all Все новости &nbsp;&nbsp;&nbsp;>
-//      span.event__description Наша компания специализируется на комплексном решении задач онлайн- и офлайн-бизнеса. Мы не стоим на месте: внедряем новые технологии, участвуем в выставках и проводим мероприятия для предпринимателей. Читайте новости компании: будьте в курсе тенденций и значимых событий.
-//      .event__list
-//        - let description_1 = 'Участие в технологической сессии «Инновационные решения в области капитального ремонта скважин» на Тюменском нефтегазовом форуме 2021, г. Тюмень, Технопарк'
-//        - let description_2 = 'С днем работников нефтяной, газовой и топливной промышленности!'
-//        - let description_3 = 'Публикация к 30-летию ПАО ЛУКОЙЛ в федеральном деловом журнале ТСР.'
-//        - let description_4 = 'Участие в выездной конференции ООО «РН-Сервис» - «Внедрение новых видов оборудования, техники и технологий при производстве работ по текущему и капитальному ремонту, освоению и испытанию нефтяных и газовых скважин»'
-//        - let dataEvent = [{img: './images/events/1.png',dateX: '17 сентября 2021', description: description_1}, {img: './images/events/2.png', dateX: '3 сентября 2021', description: description_2},{img: './images/events/3.png', dateX: '26 августа 2021', description: description_3},{img: './images/events/4.png', dateX: '30 июля 2021', description: description_4}, ]
-//        each el in dataEvent
-//          +card-event(el.img, el.dateX, el.description)
+section.event.event--desktop
+  .container
+    .event__content
+      span.event__slogan Новости
+      .event__header
+        h3.event__title События компании
+        h6.event__all Все новости &nbsp;&nbsp;&nbsp;>
+      span.event__description Наша компания специализируется на комплексном решении задач онлайн- и офлайн-бизнеса. Мы не стоим на месте: внедряем новые технологии, участвуем в выставках и проводим мероприятия для предпринимателей. Читайте новости компании: будьте в курсе тенденций и значимых событий.
+      .event__list
+        - let description_1 = 'Участие в технологической сессии «Инновационные решения в области капитального ремонта скважин» на Тюменском нефтегазовом форуме 2021, г. Тюмень, Технопарк'
+        - let description_2 = 'С днем работников нефтяной, газовой и топливной промышленности!'
+        - let description_3 = 'Публикация к 30-летию ПАО ЛУКОЙЛ в федеральном деловом журнале ТСР.'
+        - let description_4 = 'Участие в выездной конференции ООО «РН-Сервис» - «Внедрение новых видов оборудования, техники и технологий при производстве работ по текущему и капитальному ремонту, освоению и испытанию нефтяных и газовых скважин»'
+        - let dataEvent = [{img: './images/events/1.png',dateX: '17 сентября 2021', description: description_1}, {img: './images/events/2.png', dateX: '3 сентября 2021', description: description_2},{img: './images/events/3.png', dateX: '26 августа 2021', description: description_3},{img: './images/events/4.png', dateX: '30 июля 2021', description: description_4}, ]
+        each el in dataEvent
+          +card-event(el.img, el.dateX, el.description)
 
-
-//
-//section.event
-//  .container
-//    .event__content
-//      span.event__slogan Новости
-//      .event__header
-//        h3.event__title События компании
-//        h6.event__all Все новости &nbsp;&nbsp;&nbsp;>
-//      span.event__description Наша компания специализируется на комплексном решении задач онлайн- и офлайн-бизнеса. Мы не стоим на месте: внедряем новые технологии, участвуем в выставках и проводим мероприятия для предпринимателей. Читайте новости компании: будьте в курсе тенденций и значимых событий.
-//      .event__list
-//        .swiper-container.swiper-container-result
-//          .swiper-wrapper
-//
-//            - let description_1 = 'Участие в технологической сессии «Инновационные решения в области капитального ремонта скважин» на Тюменском нефтегазовом форуме 2021, г. Тюмень, Технопарк'
-//            - let description_2 = 'С днем работников нефтяной, газовой и топливной промышленности!'
-//            - let description_3 = 'Публикация к 30-летию ПАО ЛУКОЙЛ в федеральном деловом журнале ТСР.'
-//            - let description_4 = 'Участие в выездной конференции ООО «РН-Сервис» - «Внедрение новых видов оборудования, техники и технологий при производстве работ по текущему и капитальному ремонту, освоению и испытанию нефтяных и газовых скважин»'
-//            - let dataEvent = [{img: './images/events/1.png',dateX: '17 сентября 2021', description: description_1}, {img: './images/events/2.png', dateX: '3 сентября 2021', description: description_2},{img: './images/events/3.png', dateX: '26 августа 2021', description: description_3},{img: './images/events/4.png', dateX: '30 июля 2021', description: description_4}, ]
-//            each el in dataEvent
-//              +card-event(el.img, el.dateX, el.description)
+section.event.event--mobile
+  .container
+    .event__content
+      span.event__slogan Новости
+      .event__header
+        h3.event__title События компании
+        h6.event__all Все новости &nbsp;&nbsp;&nbsp;>
+      span.event__description Наша компания специализируется на комплексном решении задач онлайн- и офлайн-бизнеса. Мы не стоим на месте: внедряем новые технологии, участвуем в выставках и проводим мероприятия для предпринимателей. Читайте новости компании: будьте в курсе тенденций и значимых событий.
+      .event__list
+        .swiper-container.swiper-container-event
+          .swiper-wrapper
+            - description_1 = 'Участие в технологической сессии «Инновационные решения в области капитального ремонта скважин» на Тюменском нефтегазовом форуме 2021, г. Тюмень, Технопарк'
+            - description_2 = 'С днем работников нефтяной, газовой и топливной промышленности!'
+            - description_3 = 'Публикация к 30-летию ПАО ЛУКОЙЛ в федеральном деловом журнале ТСР.'
+            - description_4 = 'Участие в выездной конференции ООО «РН-Сервис» - «Внедрение новых видов оборудования, техники и технологий при производстве работ по текущему и капитальному ремонту, освоению и испытанию нефтяных и газовых скважин»'
+            - dataEvent = [{img: './images/events/1.png',dateX: '17 сентября 2021', description: description_1}, {img: './images/events/2.png', dateX: '3 сентября 2021', description: description_2},{img: './images/events/3.png', dateX: '26 августа 2021', description: description_3},{img: './images/events/4.png', dateX: '30 июля 2021', description: description_4}, ]
+            each el in dataEvent
+              +card-event(el.img, el.dateX, el.description)
+          .swiper-pagination
+          .swiper-button-prev#button-prev-event
+            include ../../images/sliders/left.svg
+          .swiper-button-next#button-next-event
+            include ../../images/sliders/right.svg
