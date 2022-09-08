@@ -1,9 +1,11 @@
 import Swiper from 'swiper';
 
+/*firstscreen*/
 document.addEventListener("DOMContentLoaded", () => {
-  new Swiper('.swiper-container-first', {
-    spaceBetween: 20,
+  new Swiper('.swiper-container--firstscreen', {
+    spaceBetween: 0,
     slidesPerView: 1,
+    loop: true,
     // simulateTouch: true,
     // touchRatio: 1,
     // touchAngle: 45,
@@ -23,8 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     // стрелки
     navigation: {
-      prevEl: '.swiper-button-prev',
-      nextEl: '.swiper-button-next',
+      prevEl: '#button-prev-firstscreen',
+      nextEl: '#button-next-firstscreen',
     }
   })
 });
@@ -167,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 /*events*/
 document.addEventListener("DOMContentLoaded", () => {
-  new Swiper('.swiper-container-event', {
+  new Swiper('.swiper-container--event', {
     spaceBetween: 20,
     slidesPerView: 1,
     slidesOffsetAfter: 0,
