@@ -28,13 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 });
-
+/*staff*/
 document.addEventListener("DOMContentLoaded", () => {
   new Swiper('.swiper-container-staff', {
     spaceBetween: 20,
     slidesPerView: 5,
     slidesOffsetAfter: 0,
-    // loop: true,
+    loop: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -54,18 +54,24 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 1,
       },
       599: {
+        slidesPerView: 1.5,
+      },
+      849: {
         slidesPerView: 2,
       },
       1099: {
         slidesPerView: 3,
       },
-      1919: {
+      1699: {
+        slidesPerView: 4.5,
+      },
+      1899: {
         slidesPerView: 5,
       }
     }
   })
 });
-
+/*result*/
 document.addEventListener("DOMContentLoaded", () => {
   new Swiper('.swiper-container-result', {
     spaceBetween: 20,
@@ -93,68 +99,70 @@ document.addEventListener("DOMContentLoaded", () => {
       599: {
         slidesPerView: 2,
       },
+      1499: {
+        slidesPerView: 3,
+      },
     }
   })
 });
-
-
-const slider = document.querySelector('.swiper-container-service');
-let {clientWidth} = document.body;
-let mySlider;
-
-let getSlider = () => {mySlider = new Swiper('.swiper-container-service', {
-  spaceBetween: 5,
-  slidesPerView: 6,
-  slidesOffsetAfter: 0,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    prevEl: '.swiper-button-prev.swiper-button-prev-service',
-    nextEl: '.swiper-button-next.swiper-button-next-service',
-  },
-  keyboard: {
-    enabled: true,
-    onlyInVieport: true,
-    pageUpDown: true
-  },
-  grabCursor: true,
-  breakpoints: {
-    0: {
-      slidesPerView: 6,
+/*service*/
+document.addEventListener("DOMContentLoaded", () => {
+  new Swiper('.swiper-container-service', {
+    spaceBetween: 20,
+    slidesPerView: 6,
+    slidesOffsetAfter: 0,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
     },
-  }
-})
-}
-let serviceSlider = document.addEventListener("DOMContentLoaded", getSlider);
-
-
-const resizeHandlerSlider = () => {
-  if (clientWidth >= '1500') {
-    clientWidth = document.body.clientWidth;
-    if (mySlider) {
-      mySlider.destroy();
+    navigation: {
+      prevEl: '.swiper-button-prev.swiper-button-prev-service',
+      nextEl: '.swiper-button-next.swiper-button-next-service',
+    },
+    keyboard: {
+      enabled: true,
+      onlyInVieport: true,
+      pageUpDown: true
+    },
+    grabCursor: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      699: {
+        slidesPerView: 2,
+      },
     }
-  }
-  if (clientWidth < '1500') {
-    clientWidth = document.body.clientWidth;
-    if (mySlider.destroyed === true) {
-      console.log(444)
-      getSlider();
-      console.log(mySlider)
-      console.log(serviceSlider)
+  })
+});
+/*products*/
+document.addEventListener("DOMContentLoaded", () => {
+  new Swiper('.swiper-container-products', {
+    spaceBetween: 5,
+    slidesPerView: 6,
+    slidesOffsetAfter: 0,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      prevEl: '#button-prev-product',
+      nextEl: '#button-next-product',
+    },
+    keyboard: {
+      enabled: true,
+      onlyInVieport: true,
+      pageUpDown: true
+    },
+    grabCursor: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      699: {
+        slidesPerView: 2,
+      },
     }
-  }
-  // console.log(222)
-  // serviceSlider;
-}
-
-// getSlider()
-window.addEventListener('resize', resizeHandlerSlider);
-document.addEventListener("DOMContentLoaded", resizeHandlerSlider);
-// const sliderInit = () => {
-//   mySlider = new Swiper(slider, {...})
-// }
-
+  })
+});
 

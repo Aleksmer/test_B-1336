@@ -37,6 +37,7 @@
     color: $gray-333;
     font-weight: 700;
     letter-spacing: 0;
+    white-space: nowrap;
   }
 
   &__description {
@@ -180,6 +181,17 @@
       left: -80px;
       bottom: 13px;
     }
+  }
+}
+
+@media (min-width: 1499px) {
+  .swiper-container-result {
+    padding-bottom: 0;
+
+    .swiper-pagination, .swiper-button-prev-result, .swiper-button-next-result {
+      display: none;
+    }
+
   }
 }
 

@@ -42,3 +42,9 @@
 		src: $src;
 	}
 }
+
+@mixin tablet {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}

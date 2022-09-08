@@ -1,6 +1,6 @@
 include ../mixins/card-service.pug
 
-section.service
+section.service.service--mobile
   .container
     .service__content
       span.service__slogan Помогаем развивать бизнес
@@ -13,7 +13,6 @@ section.service
           .swiper-wrapper
             - let data = [{img: './images/services/repair-1.png', title: 'Обслуживание и ремонт'},{img: './images/services/learn-2.png', title: 'Обучение'},{img: './images/services/check-3.png', title: 'Проверка средств измерений'},{img: './images/services/cloud-service-4.png', title: 'Облачный сервис'}]
             each el in data
-              .swiper-slide
               +card-service(el.img, el.title)
                 block card-service
                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
@@ -21,8 +20,36 @@ section.service
                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
-        .swiper-pagination
-        .swiper-button-prev.swiper-button-prev-service
-          include ../../images/sliders/left.svg
-        .swiper-button-next.swiper-button-next-service
-          include ../../images/sliders/right.svg
+          .swiper-pagination
+          .swiper-button-prev.swiper-button-prev-service
+            include ../../images/sliders/left.svg
+          .swiper-button-next.swiper-button-next-service
+            include ../../images/sliders/right.svg
+
+
+section.service.service--desktop
+  .container
+    .service__content
+      span.service__slogan Помогаем развивать бизнес
+      .service__header
+        h3.service__title Услуги
+        h6.service__all Все услуги &nbsp;&nbsp;&nbsp;>
+      h4.service__description Специализируемся на услугах для малого и среднего бизнеса. Проектируем помещения, внедряем CRM-системы в процессы и устанавливаем системы видеонаблюдения в коммерческие помещения
+      .services__list
+        //.swiper-container.swiper-container-service
+        //  .swiper-wrapper
+        // - let dataDesk = [{img: './images/services/repair-1.png', title: 'Обслуживание и ремонт'},{img: './images/services/learn-2.png', title: 'Обучение'},{img: './images/services/check-3.png', title: 'Проверка средств измерений'},{img: './images/services/cloud-service-4.png', title: 'Облачный сервис'}]
+        each el in data
+          //.swiper-slide
+          +card-service(el.img, el.title)
+            block card-service
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+        //.swiper-pagination
+        //.swiper-button-prev.swiper-button-prev-service
+        //  include ../../images/sliders/left.svg
+        //.swiper-button-next.swiper-button-next-service
+        //  include ../../images/sliders/right.svg
