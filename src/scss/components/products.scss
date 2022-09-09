@@ -25,13 +25,15 @@
   position: relative;
 
 
-  &:hover > .card-product__info {
-    top: 0;
-    padding: 40px 15px 20% 27px;
-    height: 100%;
-    background-color: $aqua;
-    opacity: 0.8;
-    box-shadow: none;
+  &:hover {
+    .card-product__info {
+      top: 0;
+      padding: 40px 15px 20% 27px;
+      height: 100%;
+      background-color: $aqua;
+      opacity: 0.8;
+      box-shadow: none;
+    }
 
     .card-product__title {
       color: white;
@@ -124,7 +126,6 @@
       background-color: $blue;
       border-radius: 2px;
       border: 3px solid $extra-gray;
-
     }
   }
 }
@@ -136,7 +137,7 @@
   .products--mobile {
     display: flex;
 
-    .swiper-container-products {
+    .swiper-container--products {
       padding-bottom: 50px;
     }
 

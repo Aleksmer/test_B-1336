@@ -5,47 +5,11 @@
   background-color: cadetblue;
 }
 
-//
 .swiper-container {
   width: 100%;
   height: 100%;
 }
 
-//
-//.swiper-wrapper {
-//  padding-left: initial;
-//  margin: 0;
-//}
-//
-//.swiper-slide {
-//  text-align: center;
-//  font-size: 18px;
-//  background: #fff;
-//  width: 80%;
-//  border-right: 1px solid black;
-//  /* Center slide text vertically */
-//  display: -webkit-box;
-//  display: -ms-flexbox;
-//  display: -webkit-flex;
-//  display: flex;
-//  -webkit-box-pack: center;
-//  -ms-flex-pack: center;
-//  -webkit-justify-content: center;
-//  justify-content: center;
-//  -webkit-box-align: center;
-//  -ms-flex-align: center;
-//  -webkit-align-items: center;
-//  align-items: center;
-//}
-//
-//     .swiper-slide:nth-child(2n) {
-//        width: 60%;
-//    }
-//    .swiper-slide:nth-child(3n) {
-//        width: 40%;
-//    }
-//
-//
 /*стрелки*/
 .swiper-button-prev,
 .swiper-button-next {
@@ -104,13 +68,10 @@
   bottom: 0;
 }
 
-//
 /*буллеты*/
 .swiper-pagination-bullet {
   width: 7px;
   height: 7px;
-  //line-height: 30px;
-  //font-size: 14px;
   background-color: white;
   border: $blue-border-thin;
   opacity: 1;

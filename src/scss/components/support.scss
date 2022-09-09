@@ -1,20 +1,21 @@
-.support__content {
-  margin: 50px 0;
-}
+.support {
+  &__content {
+    margin: 50px 0;
+  }
 
-.support__list {
-  display: grid;
-  grid-template-columns:  repeat(auto-fit, minmax(350px, 1fr));
-  width: 100%;
-  gap: 30px;
-  margin-top: 64px;
+  &__list {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(350px, 1fr));
+    width: 100%;
+    gap: 30px;
+    margin-top: 64px;
+  }
 }
 
 .card-support {
   display: flex;
   flex-direction: column;
   width: 100%;
-  //min-width: 350px;
   height: border-box;
   overflow: hidden;
   justify-content: start;
@@ -88,6 +89,7 @@
   .card-support {
     &__label {
       margin-bottom: 0px;
+
       img {
         height: 60px;
         width: 60px;

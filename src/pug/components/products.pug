@@ -4,7 +4,7 @@ section.products.products--mobile
   .container
     .products__list
       .services__list
-        .swiper-container.swiper-container-products
+        .swiper-container.swiper-container--products
           .swiper-wrapper
             - let n = 0;
               while n < 7
@@ -17,9 +17,9 @@ section.products.products--mobile
                       p Система видеонаблюдения ИВЭ-Видео предназначена для организации видеонаблюдения на буровой установке и объекте ТКРС. Спроектрирована с учетом особых требований по бесперебойной работе.
                     - n++
           .swiper-pagination#pagination-product
-          .swiper-button-prev.swiper-button-prev-products#button-prev-product
+          .swiper-button-prev.swiper-button-prev--products#button-prev-product
             include ../../images/sliders/left.svg
-          .swiper-button-next.swiper-button-next-products#button-next-product
+          .swiper-button-next.swiper-button-next--products#button-next-product
             include ../../images/sliders/right.svg
 
 

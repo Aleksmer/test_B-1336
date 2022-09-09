@@ -4,9 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  //background-color: rgba(0, 35, 65, 1);
   background: transparent;
-  background-position: 50% 100%;
   position: absolute;
   top: 0;
   z-index: 2;
@@ -175,38 +173,29 @@
       background-color: yellow;
     }
   }
-}
-
-.header__menu__button {
-  height: 45px;
-  width: 175px;
-  min-width: 170px;
-  border-radius: 3px;
-  border: none;
-  line-height: 20px;
-  font-weight: bold;
-  font-size: 16px;
-  font-family: $font-family-roboto;
-  text-transform: none !important;
-  padding: 12px;
-  background-color: transparent;
-  color: white;
-  border: $white-border;
-  transition: .2s;
-  margin-left: 20px;
-
-  &:hover {
-    background-color: white;
-    color: $blue;
+  &__menu-button {
+    height: 45px;
+    width: 175px;
+    min-width: 170px;
+    border-radius: 3px;
     border: none;
-    padding: 13px;
-  }
-}
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: $font-family-roboto;
+    text-transform: none !important;
+    padding: 12px;
+    background-color: transparent;
+    color: white;
+    border: $white-border;
+    transition: .2s;
+    margin-left: 20px;
 
-
-@media (max-width: 1630px) {
-  .header {
-    width: 100%;
+    &:hover {
+      background-color: white;
+      color: $blue;
+      padding: 13px;
+    }
   }
 }
 
@@ -217,7 +206,6 @@
 
     &__hr-line {
       margin-top: 63px;
-
 
       &--bottom {
         margin-top: 130px;

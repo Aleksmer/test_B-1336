@@ -9,13 +9,13 @@ section.result
         h6.result__all Все проекты &nbsp;&nbsp;&nbsp;>
       span.result__description Реализованные проекты — визитная карточка каждой компании. В этом разделе публикуем выполненные работы и рассказываем о том, как это было. Планы и задачи, процесс реализации и результаты работы специалистов. Смотрите, изучайте и пишите вопросы нам на почту.
       .result__list
-        .swiper-container.swiper-container-result
+        .swiper-container.swiper-container--result
           .swiper-wrapper
             - let dataResult = [{img: './images/result/result-1.png', title: 'Цифровой ТКРС'},{img: './images/result/result-2.png', title: 'Цифровое Бурение'},{img: './images/result/result-3.png', title: 'Цифровая скважина'}]
             each el in dataResult
               +card-result(el.img, el.title)
           .swiper-pagination
-          .swiper-button-prev.swiper-button-prev-result
+          .swiper-button-prev.swiper-button-prev--result
             include ../../images/sliders/left.svg
-          .swiper-button-next.swiper-button-next-result
+          .swiper-button-next.swiper-button-next--result
             include ../../images/sliders/right.svg
