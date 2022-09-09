@@ -3,65 +3,219 @@
   height: 100%;
   z-index: 1;
 }
-.swiper-container--firstscreen {}
-.swiper-pagination {}
-#button-prev-firstscreen {}
-#button-next-firstscreen {}
+
+.swiper-container--firstscreen {
+  .swiper-pagination {
+    display: none;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
+}
 
 .card-firstscreen {
   width: 100%;
   height: auto;
-  //position: relative;
-}
-.card-firstscreen__img {
-  //position: absolute;
-  overflow: hidden;
-  overflow: hidden;
-  display: flex;
-  justify-content: end;
-  align-items: end;
-  img {
-    min-width: 100%;
-    width: auto;
-    min-height: 100%;
-    height: 100%;
-    object-fit: cover;
-    right: 0;
-    bottom: 0;
-  }
-}
-.card-firstscreen__info {
-  width: 100%;
-  height: auto;
-  //position: absolute;
   color: white;
-}
-.card-firstscreen__title {
-  width: auto;
-  height: 100%;
-}
-.card-firstscreen__description {
-  width: auto;
-  height: 100%;
-  margin-top: 36px;
-}
-.firstscreen__container {
-  position: absolute;
-  height:auto;
-  background-color: black;
-  transform: translate(-50%, 200px);
-  display: flex;
-  z-index: 999;
-  left: 50%;
-  top: 0;
-}
-
-
-@media (min-width: 1520px) {
-  .card-firstscreen__img {
-    height: 880px;
+  &--light {
+    color: black;
+    //.card-firstscreen__info {
+    //  color: black;
+    //}
+    //  width: auto;
+    //  height: 100%;
+    //  //background-color: rgba(0,0,0,0.1);
+    //}
+    //
+    //&__description {
+    //  width: auto;
+    //  height: 100%;
+    //  margin-top: 16px;
+    //  //background-color: rgba(0,0,0,0.1);
+    //}
   }
-  .card-firstscreen__info {
+
+
+  &__img {
+    overflow: hidden;
+    display: flex;
+    height: 880px;
+    justify-content: end;
+    align-items: end;
+
+    img {
+      min-width: 100%;
+      width: auto;
+      min-height: 100%;
+      height: 100%;
+      object-fit: cover;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__info {
+    width: 50%;
+    height: auto;
+    //color: white;
     top: 200px;
+    //text-shadow: 2px 2px black;
+    //background-color: rgba(0,0,0,0.1);
+    //border-radius: 50px;
+    //box-shadow: 0 0 100px 0 rgba(0,0,0,1);
+    //box-shadow: 0 0 100px 0 rgba(0,0,0,8), inset 0 0 100px 0 rgba(0,0,0,8);
+  }
+
+  &__title {
+    width: auto;
+    height: 100%;
+    //background-color: rgba(0,0,0,0.1);
+  }
+
+  &__description {
+    width: auto;
+    height: 100%;
+    margin-top: 16px;
+    //background-color: rgba(0,0,0,0.1);
+  }
+
+  &__button {
+    margin-top: 35px;
+  }
+
+  &__container {
+    position: absolute;
+    height: auto;
+    transform: translate(-50%, 320px);
+    display: flex;
+    z-index: 999;
+    left: 50%;
+    top: 0;
+  }
+}
+
+@media (max-width: 1520px) {
+  .card-firstscreen {
+    &__title {
+      font-size: 36px;
+    }
+
+    &__description {
+      font-size: 16px;
+      margin-top: 30px;
+    }
+
+    &__img {
+      height: 655px;
+    }
+
+    &__info {
+      width: 90%;
+    }
+
+    &__container {
+      transform: translate(-50%, 250px);
+    }
+  }
+  .swiper-container--firstscreen {
+
+    .swiper-pagination,
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: flex;
+      top: auto;
+      bottom: 32px;
+      right: 30px;
+    }
+
+    .swiper-pagination {
+      bottom: 43px;
+    }
+
+    .swiper-pagination-bullet {
+      margin-right: 100px;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      opacity: .8;
+      border: none;
+
+      &-active {
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+      }
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+      opacity: 0.7;
+    }
+
+    .swiper-button-prev {
+      left: auto;
+      right: 70px;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .card-firstscreen {
+
+    &__container {
+      transform: translate(-50%, 190px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card-firstscreen {
+
+    &__title {
+      font-size: 22px;
+      background: none;
+    }
+
+    &__description {
+      margin-top: 15px;
+      background: none;
+    }
+
+    &__img {
+      height: 413px;
+    }
+
+    &__info {
+      width: 90%;
+      background: none;
+
+    }
+
+    &__button {
+      margin-top: 25px;
+      margin-bottom: 40px;
+      &:hover {
+        background-color: $gray;
+        color: yellow;
+      }
+    }
+
+    &__container {
+      transform: none;
+      position: initial;
+      background-color: $blue;
+    }
+  }
+
+  .swiper-container--firstscreen {
+    .swiper-pagination {
+      bottom: auto;
+      justify-content: center;
+      top: 380px;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+      display: none;
+    }
   }
 }

@@ -1,8 +1,9 @@
-mixin card-firstscreen(img, title, description)
-  .card-firstscreen.swiper-slide
+mixin card-firstscreen(img, title, description, lightClass = null)
+  .card-firstscreen.swiper-slide(class= lightClass && 'card-firstscreen--light')
     .card-firstscreen__img
       img(src=img)
-    .container.firstscreen__container
+    .container.card-firstscreen__container
       .card-firstscreen__info
         h2.card-firstscreen__title=title
         h6.card-firstscreen__description=description
+        button.button.button--white-blue.card-firstscreen__button Подробнее

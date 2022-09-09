@@ -7,15 +7,15 @@ include ../mixins/card-firstscreen.pug
 - let descr_firstscreen_2 = 'С днем работников нефтяной, газовой и топливной промышленности! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, et harum! Asperiores cupiditate dicta earum laborum magni perferendis repellat sed?'
 - let descr_firstscreen_3 = 'Публикация к 30-летию ПАО ЛУКОЙЛ в федеральном деловом журнале ТСР. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, et harum! Asperiores cupiditate dicta earum laborum magni perferendis repellat sed?'
 - let descr_firstscreen_4 = 'Участие в выездной конференции ООО «РН-Сервис» - «Внедрение новых видов оборудования, техники и технологий при производстве работ по текущему и капитальному ремонту, освоению и испытанию нефтяных и газовых скважин»'
-- let dataFirstscreen = [{img: './../images/frontscreen/1.jpg',title: title_firstscreen_1, description: descr_firstscreen_1}, {img: '../../images/frontscreen/2.jpeg', title: title_firstscreen_2, description: descr_firstscreen_2},{img: '../../images/frontscreen/3.jpg', title: title_firstscreen_3, description: descr_firstscreen_3},{img: '../../images/frontscreen/4.jpg', title: title_firstscreen_4, description: descr_firstscreen_4},{img: '../../images/frontscreen/5.jpg', title: title_firstscreen_2, description: descr_firstscreen_3}]
+- let dataFirstscreen = [{img: './../images/frontscreen/1.jpg',title: title_firstscreen_1, description: descr_firstscreen_1, light: true}, {img: '../../images/frontscreen/2.jpeg', title: title_firstscreen_2, description: descr_firstscreen_2, light: null},{img: '../../images/frontscreen/3.jpg', title: title_firstscreen_3, description: descr_firstscreen_3, light: null},{img: '../../images/frontscreen/4.jpg', title: title_firstscreen_4, description: descr_firstscreen_4, light: true},{img: '../../images/frontscreen/5.jpg', title: title_firstscreen_2, description: descr_firstscreen_3, light: true}]
 
 section.firstscreen
   .swiper-container.swiper-container--firstscreen
     .swiper-wrapper
        each el in dataFirstscreen
-         +card-firstscreen(el.img, el.title, el.description)
-    .swiper-pagination
-    .swiper-button-prev#button-prev-firstscreen
+         +card-firstscreen(el.img, el.title, el.description, el.light)
+    .swiper-pagination.firstscreen__swiper-pagination
+    .swiper-button-prev.swiper-button-prev--firstscreen#button-prev-firstscreen
       include ../../images/sliders/left.svg
-    .swiper-button-next#button-next-firstscreen
+    .swiper-button-next.swiper-button-next--firstscreen#button-next-firstscreen
       include ../../images/sliders/right.svg

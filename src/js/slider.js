@@ -1,21 +1,17 @@
 import Swiper from 'swiper';
 
-/*firstscreen*/
-document.addEventListener("DOMContentLoaded", () => {
-  new Swiper('.swiper-container--firstscreen', {
-    spaceBetween: 0,
-    slidesPerView: 1,
-    loop: true,
-    // simulateTouch: true,
-    // touchRatio: 1,
-    // touchAngle: 45,
-    // grabCursor: true,
-    // slideToClickedSlide: true,
-    // keyboard: {
-    //   enabled: true,
-    //   onlyInVieport: true,
-    //   pageUpDown: true
-    // },
+const generateSwiper = (name,spaceBetween, slidesPerView, breakpoints, loop) => {
+  return new Swiper(`.swiper-container--${name}`, {
+    breakpoints,
+    spaceBetween,
+    slidesPerView,
+    loop,
+    grabCursor: true,
+    keyboard: {
+      enabled: true,
+      onlyInVieport: true,
+      pageUpDown: true
+    },
     // Навигация, текущее положение прогрессбар
     pagination: {
       el: '.swiper-pagination',
@@ -27,6 +23,42 @@ document.addEventListener("DOMContentLoaded", () => {
     navigation: {
       prevEl: '#button-prev-firstscreen',
       nextEl: '#button-next-firstscreen',
+    },
+    breakpoints
+  })
+}
+
+
+
+/*firstscreen*/
+document.addEventListener("DOMContentLoaded", () => {
+  new Swiper('.swiper-container--firstscreen', {
+    spaceBetween: 0,
+    slidesPerView: 1,
+    loop: true,
+    grabCursor: true,
+    keyboard: {
+      enabled: true,
+      onlyInVieport: true,
+      pageUpDown: true
+    },
+    // Навигация, текущее положение прогрессбар
+    pagination: {
+      el: '.swiper-pagination',
+      // буллеты
+      clickable: true,
+      // dynamicBullets: true,
+    },
+    // стрелки
+    navigation: {
+      prevEl: '.swiper-button-prev--firstscreen',
+      nextEl: '.swiper-button-next--firstscreen',
+    },
+    breakpoints: {
+      1520: {
+        allowTouchMove: false,
+        grabCursor: false,
+      }
     }
   })
 });
