@@ -1,6 +1,6 @@
 .support {
   &__content {
-    margin: 50px 0;
+    margin: 30px 0;
   }
 
   &__list {
@@ -103,6 +103,19 @@
 
     &__description {
       font-size: 20px;
+    }
+  }
+}
+
+@include phone {
+  .support {
+
+    .card-support {
+      max-height: 300px;
+    }
+
+    &__list {
+      margin-top: 20px;
     }
   }
 }

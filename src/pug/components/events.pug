@@ -23,7 +23,9 @@ section.event.event--mobile
       span.event__slogan Новости
       .event__header
         h3.event__title События компании
-        h6.event__all Все новости &nbsp;&nbsp;&nbsp;>
+        h6.event__all
+          span Все новости
+          span &nbsp;&nbsp;&nbsp;>
       span.event__description Наша компания специализируется на комплексном решении задач онлайн- и офлайн-бизнеса. Мы не стоим на месте: внедряем новые технологии, участвуем в выставках и проводим мероприятия для предпринимателей. Читайте новости компании: будьте в курсе тенденций и значимых событий.
       .event__list
         .swiper-container.swiper-container--event
@@ -35,8 +37,9 @@ section.event.event--mobile
             - dataEvent = [{img: './images/events/1.png',dateX: '17 сентября 2021', description: description_1}, {img: './images/events/2.png', dateX: '3 сентября 2021', description: description_2},{img: './images/events/3.png', dateX: '26 августа 2021', description: description_3},{img: './images/events/4.png', dateX: '30 июля 2021', description: description_4}, ]
             each el in dataEvent
               +card-event(el.img, el.dateX, el.description)
-          .swiper-pagination
-          .swiper-button-prev.swiper-button-prev--event
-            include ../../images/sliders/left.svg
-          .swiper-button-next.swiper-button-next--event
-            include ../../images/sliders/right.svg
+          .swiper-control
+            .swiper-pagination
+            .swiper-button-prev.swiper-button-prev--event
+              include ../../images/svg/sliders/left.svg
+            .swiper-button-next.swiper-button-next--event
+              include ../../images/svg/sliders/right.svg

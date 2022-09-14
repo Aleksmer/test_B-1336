@@ -75,3 +75,16 @@
     }
   }
 }
+
+@include phone {
+  .request {
+
+    &__slogan {
+      margin-top: 70px;
+    }
+
+    &__valid-block {
+      margin-bottom: 70px;
+    }
+  }
+}

@@ -30,6 +30,7 @@
 .swiper-button-prev {
   background-color: white;
   border: $blue-border-thin;
+  transition: .2s;
 
   &:hover {
     background-color: $blue;
@@ -44,20 +45,20 @@
 .swiper-button-next {
   background-color: white;
   border: $blue-border-thin;
+  transition: .2s;
 
   path {
     fill: $blue
   }
 
-&:hover {
-  background-color: $blue;
-  border: none;
+  &:hover {
+    background-color: $blue;
+    border: none;
 
-  path {
-    fill: white
+    path {
+      fill: white
+    }
   }
-}
-
 }
 
 /*пагинация*/
@@ -76,9 +77,40 @@
   border: $blue-border-thin;
   opacity: 1;
 
+  &:not(:last-child) {
+    margin-right: 3px;
+  }
+
   &-active {
     width: 10px;
     height: 10px;
     background-color: $blue;
+  }
+}
+
+
+@include phone {
+
+  .swiper-control {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    margin-top: 10px;
+    padding-right: 40px;
+
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: static;
+      margin-top: unset;
+    }
+
+    .swiper-button-prev {
+      margin-right: 10px;
+    }
+
+    .swiper-pagination {
+      position: static;
+      padding-right: 80px;
+    }
   }
 }

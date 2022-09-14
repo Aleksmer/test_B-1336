@@ -17,7 +17,7 @@
   }
 
   &__content {
-    margin: 50px 0;
+    margin: 30px 0;
   }
 
   &__slogan {
@@ -34,6 +34,7 @@
     justify-content: space-between;
     align-content: center;
     margin-top: 16px;
+    align-items: center;
   }
 
   &__all {
@@ -170,10 +171,10 @@
 
 .swiper-container--service {
   width: 100vw;
-  position: initial;
+  position: relative;
 
   .swiper-wrapper {
-    margin-bottom: 60px;
+    height: unset;
   }
 
   .swiper-slide {
@@ -188,7 +189,6 @@
     }
   }
 
-  /*стрелки*/
   .swiper-button-prev,
   .swiper-button-next {
     position: absolute;
@@ -199,26 +199,39 @@
   }
 }
 
-@include tablet {
-  .service--desktop {
-    display: none;
-  }
-  .service--mobile {
-    display: flex;
-  }
-
-  .swiper-container--service {
-
-    /*стрелки*/
-    .swiper-button-prev,
-    .swiper-button-next {
-      top: auto;
-      bottom: 0;
+@include phone {
+  .service {
+    &--desktop {
+      display: none;
     }
 
-    .swiper-button-prev {
-      left: auto;
-      right: 70px;
+    &--mobile {
+      display: flex;
+    }
+    &__all {
+      span:first-child {
+        font-size: 10px;
+        opacity: 0;
+      }
+    }
+
+    &__list {
+      margin-top: 20px;
     }
   }
+
+  //.swiper-container--service {
+  //
+  //  /*стрелки*/
+  //  .swiper-button-prev,
+  //  .swiper-button-next {
+  //    top: auto;
+  //    bottom: 0;
+  //  }
+  //
+  //  .swiper-button-prev {
+  //    left: auto;
+  //    right: 60px;
+  //  }
+  //}
 }

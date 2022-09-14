@@ -182,4 +182,13 @@
       display: none;
     }
   }
+  .maker {
+    padding-top: 20px;
+    height: auto;
+    display: flex;
+    gap: 10px;
+    a {
+      white-space: initial;
+    }
+  }
 }

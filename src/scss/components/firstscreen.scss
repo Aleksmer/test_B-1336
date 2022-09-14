@@ -18,6 +18,7 @@
   width: 100%;
   height: auto;
   color: white;
+
   &--light {
     color: black;
   }
@@ -146,17 +147,22 @@
   }
 }
 
-@media (max-width: 768px) {
+@include phone {
   .card-firstscreen {
+    color: white;
+    height: initial;
 
     &__title {
       font-size: 22px;
       background: none;
+      line-height: 26px;
+      height: auto;
     }
 
     &__description {
       margin-top: 15px;
       background: none;
+      height: auto;
     }
 
     &__img {
@@ -166,12 +172,13 @@
     &__info {
       width: 90%;
       background: none;
-
+      margin-top: 21px;
     }
 
     &__button {
       margin-top: 25px;
       margin-bottom: 40px;
+
       &:hover {
         background-color: $gray;
         color: yellow;
@@ -182,6 +189,7 @@
       transform: none;
       position: initial;
       background-color: $blue;
+      height: 100%;
     }
   }
 

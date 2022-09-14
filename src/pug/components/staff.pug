@@ -6,7 +6,10 @@ section.staff
       span.staff__slogan Люди, которые всегда помогут
       .staff__header
         h3.staff__title Сотрудники
-        h6.staff__all Все сотрудники &nbsp;&nbsp;&nbsp;>
+        a(href='#')
+          h6.staff__all
+            span Все сотрудники
+            span &nbsp;&nbsp;&nbsp;>
       span.staff__description Сотрудники — ключевое звено нашей компании. У нас работают специалисты узкого и широкого профиля, что позволяет обеспечить комплексный подход к решению ваших задач. Они знают, в каком направлении двигаться для достижения нужного результата. Свяжитесь с сотрудниками по контактам из карточек специалистов. Начните действовать уже сегодня!
       .staff__list
         .swiper-container.swiper-container--staff
@@ -15,8 +18,9 @@ section.staff
             each el in dataStaff
               .swiper-slide
                 +card-staff(el.img)
-          .swiper-pagination
-          .swiper-button-prev.swiper-button-prev--staff
-            include ../../images/sliders/left.svg
-          .swiper-button-next.swiper-button-next--staff
-            include ../../images/sliders/right.svg
+          .swiper-control
+            .swiper-pagination
+            .swiper-button-prev.swiper-button-prev--staff
+              include ../../images/svg/sliders/left.svg
+            .swiper-button-next.swiper-button-next--staff
+              include ../../images/svg/sliders/right.svg
