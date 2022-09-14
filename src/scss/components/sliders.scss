@@ -63,10 +63,13 @@
 
 /*пагинация*/
 .swiper-pagination {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /*буллеты*/
@@ -111,6 +114,8 @@
     .swiper-pagination {
       position: static;
       padding-right: 80px;
+      left: unset;
+      transform: unset;
     }
   }
 }

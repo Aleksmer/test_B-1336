@@ -80,9 +80,12 @@
       }
     }
 
+    .swiper-pagination {
+      bottom: -20px;
+    }
+
     .swiper-button-prev,
     .swiper-button-next {
-
     }
 
     .swiper-button-next {
@@ -93,6 +96,11 @@
 
 @include phone {
   .staff {
+
+    //&__list {
+    //  padding-bottom: 20px;
+    //}
+
     &__all span:first-child {
       font-size: 2px;
       opacity: 0;

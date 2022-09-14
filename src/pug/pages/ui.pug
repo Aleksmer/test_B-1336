@@ -1,130 +1,126 @@
-include ../mixins/card-product.pug
-include ../mixins/card-service.pug
-include ../mixins/card-result.pug
-include ../mixins/card-staff.pug
-include ../mixins/card-support.pug
-include ../mixins/card-event.pug
-include ../mixins/card-advantages.pug
-include ../mixins/slider.pug
-
-
-doctype html
-html(lang="en")
-
-head
-  meta(charset="UTF-8")
-  meta(name="viewport" content="width=device-width, initial-scale=1.0")
-  title Document
-
-body
-  .ui
-    button.button Подписаться
-    button.button.button--none-bc-white Подписаться
-    button.button.button--small-height Подписаться
-    button.button.button--white-blue Подписаться
-    button.button.button--blue-white Подписаться
-    button.button.button--none-bc-blue Подписаться
-    <br><br><br><br>
-
-    .slider-button
-      include ../../images/ui/slider-buttons/left.svg
-    .slider-button.slider-button--left-blue
-      include ../../images/ui/slider-buttons/left.svg
-    .slider-button.slider-button--left-white
-      include ../../images/ui/slider-buttons/left.svg
-    .slider-button.slider-button--right-blue
-      include ../../images/ui/slider-buttons/right.svg
-    .slider-button.slider-button--right-white
-      include ../../images/ui/slider-buttons/right.svg
-    <br><br><br>
-
-    .slider-dot--small
-    .slider-dot--big
-
-    <br><br>
-
-    //section.sssssss
-    //  .container
-
-
-    .slider
-      .swiper-container
-        .swiper-wrapper
-          - let dataSlider = [{img: '../../images/advantages/1.svg', title: '> 30 лет', description: 'работаем на рынке нефтегазовой отрасли'}, {img: '../../images/advantages/2.svg', title: '> 70%', description: 'подъемных агрегатов ТКРС в РФ оснащены ИВЭ-50'}, {img: '../../images/advantages/3.svg', title: '> 60%', description: 'буровых установок в РФ оснащены ИВЭ-50'}, {img: '../../images/advantages/4.svg', title: '> 3000', description: 'добывающих скважин в системе ASC iWell'}, {img: '../../images/advantages/5.svg', title: '> 2500', description: 'бригад бурения и ТКРС в системе мониторинга ASC'}, ]
-          each el in dataSlider
-            .swiper-slide
-              +slider(el.img, el.title, el.description)
-
-
-    <br><br>
-    span.input-title Ваше имя
-    input.input(placeholder='Введите имя')
-    <br><br><br>
-    label.checkform-label
-      input.checkbox-input(type='checkbox' value='value1' checked="checked")
-      span.checkbox-checkmark
-        include ../../images/ui/checkbox/checkmark.svg
-      span.checkbox-span Текст. Товарные позиции со скидкой в этом месяце
-    <br><br><br>
-    //.products__list
-    //  - let n = 0;
-    //    while n < 7
-    //      - let img = n % 2 ? './images/products/video-systems.png' : './images/products/v-systems.png'
-    //      +card-product(img, 'Системы видеонаблюдения', 12)
-    //        block card-product
-    //          p Система видеонаблюдения ИВЭ-Видео предназначена для организации видеонаблюдения на буровой установке и объекте ТКРС. Спроектрирована с учетом особых требований по бесперебойной работе.
-    //          p Система видеонаблюдения ИВЭ-Видео предназначена для организации видеонаблюдения на буровой установке и объекте ТКРС. Спроектрирована с учетом особых требований по бесперебойной работе.
-    //          p Система видеонаблюдения ИВЭ-Видео предназначена для организации видеонаблюдения на буровой установке и объекте ТКРС. Спроектрирована с учетом особых требований по бесперебойной работе.
-    //          p Система видеонаблюдения ИВЭ-Видео предназначена для организации видеонаблюдения на буровой установке и объекте ТКРС. Спроектрирована с учетом особых требований по бесперебойной работе.
-    //        - n++
-    <br><br>
-    <br><br>
-    //.services__list
-    //  - let data = [{img: './images/services/repair-1.png', title: 'Обслуживание и ремонт'},{img: './images/services/learn-2.png', title: 'Обучение'},{img: './images/services/check-3.png', title: 'Проверка средств измерений'},{img: './images/services/cloud-service-4.png', title: 'Облачный сервис'}]
-    //  each el in data
-    //    +card-service(el.img, el.title)
-    //      block card-service
-    //        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
-    //        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
-    //        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
-    //        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
-    //        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
-    <br><br>
-    <br><br>
-    //.result__list
-    //  - let dataResult = [{img: './images/result/result-1.png', title: 'Цифровой ТКРС'},{img: './images/result/result-2.png', title: 'Цифровое Бурение'},{img: './images/result/result-3.png', title: 'Цифровая скважина'}]
-    //  each el in dataResult
-    //    +card-result(el.img, el.title)
-    <br><br>
-    <br><br>
-    //.staff__list
-    //  - let dataStaff = [{img: './images/staff/2.png'},{img: './images/staff/3.png'},{img: './images/staff/1.png'},{img: './images/staff/4.png'},{img: './images/staff/5.png'},{img: './images/staff/6.png'}]
-    //  each el in dataStaff
-    //    +card-staff(el.img)
-    <br><br>
-    <br><br>
-    //.support__list
-    //  - let dataSupport = [{img: './images/support/support-1.png', title: 'ИВЭ-50', description: 'Техническая поддержка'}, {img: './images/support/support-2.png', title: 'ИВЭ-70', description: 'Программное обеспечение'}]
-    //  each el in dataSupport
-    //    +card-support(el.img, el.title, el.description)
-
-    <br><br>
-    <br><br>
-    //.event__list
-    //  - let description_1 = 'Участие в технологической сессии «Инновационные решения в области капитального ремонта скважин» на Тюменском нефтегазовом форуме 2021, г. Тюмень, Технопарк'
-    //  - let description_2 = 'С днем работников нефтяной, газовой и топливной промышленности!'
-    //  - let description_3 = 'Публикация к 30-летию ПАО ЛУКОЙЛ в федеральном деловом журнале ТСР.'
-    //  - let description_4 = 'Участие в выездной конференции ООО «РН-Сервис» - «Внедрение новых видов оборудования, техники и технологий при производстве работ по текущему и капитальному ремонту, освоению и испытанию нефтяных и газовых скважин»'
-    //  - let dataEvent = [{img: './images/events/1.png',dateX: '17 сентября 2021', description: description_1}, {img: './images/events/2.png', dateX: '3 сентября 2021', description: description_2},{img: './images/events/3.png', dateX: '26 августа 2021', description: description_3},{img: './images/events/4.png', dateX: '30 июля 2021', description: description_4}, ]
-    //  each el in dataEvent
-    //    +card-event(el.img, el.dateX, el.description)
-    <br><br>
-    <br><br>
-    h1 ИВЭ-50
-    h2 ИВЭ-50
-    h3 ИВЭ-50
-    h4 ИВЭ-50
-    h5 ИВЭ-50
-    h6 ИВЭ-50
-
-
+//include ../mixins/card-product.pug
+//include ../mixins/card-service.pug
+//include ../mixins/card-result.pug
+//include ../mixins/card-staff.pug
+//include ../mixins/card-support.pug
+//include ../mixins/card-event.pug
+//include ../mixins/card-advantages.pug
+////include ../mixins/slider.pug
+//
+//
+//doctype html
+//html(lang="en")
+//
+//head
+//  meta(charset="UTF-8")
+//  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+//  title Document
+//
+//body
+//  .ui
+//    button.button Подписаться
+//    button.button.button--none-bc-white Подписаться
+//    button.button.button--small-height Подписаться
+//    button.button.button--white-blue Подписаться
+//    button.button.button--blue-white Подписаться
+//    button.button.button--none-bc-blue Подписаться
+//    <br><br><br><br>
+//
+//    .slider-button
+//      include ../../images/ui/slider-buttons/left.svg
+//    .slider-button.slider-button--left-blue
+//      include ../../images/ui/slider-buttons/left.svg
+//    .slider-button.slider-button--left-white
+//      include ../../images/ui/slider-buttons/left.svg
+//    .slider-button.slider-button--right-blue
+//      include ../../images/ui/slider-buttons/right.svg
+//    .slider-button.slider-button--right-white
+//      include ../../images/ui/slider-buttons/right.svg
+//    <br><br><br>
+//
+//    .slider-dot
+//    .slider-dot--big
+//
+//    <br><br>
+//
+//    .slider
+//      .swiper-container
+//        .swiper-wrapper
+//          - let dataSlider = [{img: '../../images/advantages/1.svg', title: '> 30 лет', description: 'работаем на рынке нефтегазовой отрасли'}, {img: '../../images/advantages/2.svg', title: '> 70%', description: 'подъемных агрегатов ТКРС в РФ оснащены ИВЭ-50'}, {img: '../../images/advantages/3.svg', title: '> 60%', description: 'буровых установок в РФ оснащены ИВЭ-50'}, {img: '../../images/advantages/4.svg', title: '> 3000', description: 'добывающих скважин в системе ASC iWell'}, {img: '../../images/advantages/5.svg', title: '> 2500', description: 'бригад бурения и ТКРС в системе мониторинга ASC'}, ]
+//          each el in dataSlider
+//            .swiper-slide
+//              +slider(el.img, el.title, el.description)
+//
+//
+//    <br><br>
+//    span.input-title Ваше имя
+//    input.input(placeholder='Введите имя')
+//    <br><br><br>
+//    label.checkform-label
+//      input.checkbox-input(type='checkbox' value='value1' checked="checked")
+//      span.checkbox-checkmark
+//        include ../../images/ui/checkbox/checkmark.svg
+//      span.checkbox-span Текст. Товарные позиции со скидкой в этом месяце
+//    <br><br><br>
+//    //.products__list
+//    //  - let n = 0;
+//    //    while n < 7
+//    //      - let img = n % 2 ? './images/products/video-systems.png' : './images/products/v-systems.png'
+//    //      +card-product(img, 'Системы видеонаблюдения', 12)
+//    //        block card-product
+//    //          p Система видеонаблюдения ИВЭ-Видео предназначена для организации видеонаблюдения на буровой установке и объекте ТКРС. Спроектрирована с учетом особых требований по бесперебойной работе.
+//    //          p Система видеонаблюдения ИВЭ-Видео предназначена для организации видеонаблюдения на буровой установке и объекте ТКРС. Спроектрирована с учетом особых требований по бесперебойной работе.
+//    //          p Система видеонаблюдения ИВЭ-Видео предназначена для организации видеонаблюдения на буровой установке и объекте ТКРС. Спроектрирована с учетом особых требований по бесперебойной работе.
+//    //          p Система видеонаблюдения ИВЭ-Видео предназначена для организации видеонаблюдения на буровой установке и объекте ТКРС. Спроектрирована с учетом особых требований по бесперебойной работе.
+//    //        - n++
+//    <br><br>
+//    <br><br>
+//    //.services__list
+//    //  - let data = [{img: './images/services/repair-1.png', title: 'Обслуживание и ремонт'},{img: './images/services/learn-2.png', title: 'Обучение'},{img: './images/services/check-3.png', title: 'Проверка средств измерений'},{img: './images/services/cloud-service-4.png', title: 'Облачный сервис'}]
+//    //  each el in data
+//    //    +card-service(el.img, el.title)
+//    //      block card-service
+//    //        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+//    //        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+//    //        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+//    //        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+//    //        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, assumenda debitis harum molestiae ratione sapiente voluptas. Doloremque ex illo similique?
+//    <br><br>
+//    <br><br>
+//    //.result__list
+//    //  - let dataResult = [{img: './images/result/result-1.png', title: 'Цифровой ТКРС'},{img: './images/result/result-2.png', title: 'Цифровое Бурение'},{img: './images/result/result-3.png', title: 'Цифровая скважина'}]
+//    //  each el in dataResult
+//    //    +card-result(el.img, el.title)
+//    <br><br>
+//    <br><br>
+//    //.staff__list
+//    //  - let dataStaff = [{img: './images/staff/2.png'},{img: './images/staff/3.png'},{img: './images/staff/1.png'},{img: './images/staff/4.png'},{img: './images/staff/5.png'},{img: './images/staff/6.png'}]
+//    //  each el in dataStaff
+//    //    +card-staff(el.img)
+//    <br><br>
+//    <br><br>
+//    //.support__list
+//    //  - let dataSupport = [{img: './images/support/support-1.png', title: 'ИВЭ-50', description: 'Техническая поддержка'}, {img: './images/support/support-2.png', title: 'ИВЭ-70', description: 'Программное обеспечение'}]
+//    //  each el in dataSupport
+//    //    +card-support(el.img, el.title, el.description)
+//
+//    <br><br>
+//    <br><br>
+//    //.event__list
+//    //  - let description_1 = 'Участие в технологической сессии «Инновационные решения в области капитального ремонта скважин» на Тюменском нефтегазовом форуме 2021, г. Тюмень, Технопарк'
+//    //  - let description_2 = 'С днем работников нефтяной, газовой и топливной промышленности!'
+//    //  - let description_3 = 'Публикация к 30-летию ПАО ЛУКОЙЛ в федеральном деловом журнале ТСР.'
+//    //  - let description_4 = 'Участие в выездной конференции ООО «РН-Сервис» - «Внедрение новых видов оборудования, техники и технологий при производстве работ по текущему и капитальному ремонту, освоению и испытанию нефтяных и газовых скважин»'
+//    //  - let dataEvent = [{img: './images/events/1.png',dateX: '17 сентября 2021', description: description_1}, {img: './images/events/2.png', dateX: '3 сентября 2021', description: description_2},{img: './images/events/3.png', dateX: '26 августа 2021', description: description_3},{img: './images/events/4.png', dateX: '30 июля 2021', description: description_4}, ]
+//    //  each el in dataEvent
+//    //    +card-event(el.img, el.dateX, el.description)
+//    <br><br>
+//    <br><br>
+//    h1 ИВЭ-50
+//    h2 ИВЭ-50
+//    h3 ИВЭ-50
+//    h4 ИВЭ-50
+//    h5 ИВЭ-50
+//    h6 ИВЭ-50
+//
+//
