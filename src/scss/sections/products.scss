@@ -1,0 +1,29 @@
+.products--mobile {
+  display: none
+}
+
+.products--desktop {
+  display: flex
+}
+
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 33px;
+  width: 100%;
+  margin: 30px 0;
+}
+
+@include phone {
+  .products--desktop {
+    display: none
+  }
+  .products--mobile {
+    display: flex;
+
+    .swiper-container--products {
+      padding-bottom: 50px;
+    }
+  }
+}
+

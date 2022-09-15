@@ -1,0 +1,17 @@
+.card-staff {
+
+  &__img {
+    min-width: 100%;
+
+    img {
+      min-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+  &__img {
+    img {
+      height: auto;
+    }
+  }
+}

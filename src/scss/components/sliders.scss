@@ -98,23 +98,22 @@
     grid-template-columns: 1fr auto auto;
     margin-top: 10px;
     padding-right: 40px;
+  }
 
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: static;
+    margin-top: unset;
+  }
 
-    .swiper-button-prev,
-    .swiper-button-next {
-      position: static;
-      margin-top: unset;
-    }
+  .swiper-button-prev {
+    margin-right: 10px;
+  }
 
-    .swiper-button-prev {
-      margin-right: 10px;
-    }
-
-    .swiper-pagination {
-      position: static;
-      padding-right: 80px;
-      left: unset;
-      transform: unset;
-    }
+  .swiper-pagination {
+    position: static;
+    padding-right: 80px;
+    left: unset;
+    transform: unset;
   }
 }

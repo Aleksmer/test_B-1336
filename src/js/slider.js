@@ -43,15 +43,15 @@ generateSwiper('staff', 20, true, 5, {
   849: {
     slidesPerView: 2,
   },
-  1099: {
+  1149: {
     slidesPerView: 3,
   },
   1699: {
-    slidesPerView: 4.5,
+    slidesPerView: 4,
   },
-  1899: {
-    slidesPerView: 5,
-  }
+  // 1899: {
+  //   slidesPerView: 5,
+  // }
 })
 
 /*result*/
@@ -82,7 +82,7 @@ generateSwiper('products', 5, false, 6, {
   0: {
     slidesPerView: 1,
   },
-  699: {
+  769: {
     slidesPerView: 2,
   }
 })

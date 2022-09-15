@@ -1,11 +1,20 @@
-.staff__list {
-  width: 100%;
-  margin-top: 43px;
-  position: relative;
-}
+.service {
+  &--mobile {
+    display: none;
+  }
 
-.staff {
-  background-color: $light-blue;
+  &--desktop {
+    display: flex;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 33px;
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+  }
 
   &__content {
     margin: 30px 0;
@@ -26,7 +35,6 @@
     align-content: center;
     margin-top: 16px;
     align-items: center;
-    margin-bottom: 10px;
   }
 
   &__all {
@@ -41,61 +49,49 @@
 
   &__description {
     font-family: $font-family-montserrat;
+    font-size: 16px;
     line-height: 24px;
     color: $gray-666;
     font-weight: 400;
     letter-spacing: 0;
     margin-top: 23px;
   }
+}
 
-  .card-staff {
+.swiper-container--service {
+  width: 100vw;
+  position: relative;
 
-    &__img {
-      min-width: 100%;
-
-      img {
-        min-width: 100%;
-        height: auto;
-        object-fit: contain;
-      }
-    }
+  .swiper-wrapper {
+    height: unset;
   }
 
-  .swiper-container--staff {
-    width: 100%;
-    position: initial;
+  .card-staff__img {
 
-    .swiper-wrapper {
-      padding-bottom: 20px;
-    }
-
-    .swiper-slide {
-      background: none;
-      border: none;
-    }
-
-    .card-staff__img {
-      img {
-        height: auto;
-      }
+    img {
+      height: auto;
     }
   }
 }
 
 @include phone {
-  .staff {
-
-    &__all span:first-child {
-      font-size: 2px;
-      opacity: 0;
+  .service {
+    &--desktop {
+      display: none;
     }
 
-    .staff__list {
-
-      .swiper-wrapper {
-        padding-bottom: 0;
+    &--mobile {
+      display: flex;
+    }
+    &__all {
+      span:first-child {
+        font-size: 10px;
+        opacity: 0;
       }
+    }
+
+    &__list {
+      margin-top: 20px;
     }
   }
 }
-

@@ -1,0 +1,83 @@
+.staff {
+  background-color: $light-blue;
+
+  &__list {
+    width: 100%;
+    margin-top: 43px;
+    position: relative;
+  }
+
+  &__content {
+    margin: 30px 0;
+  }
+
+  &__slogan {
+    font-family: $font-family-montserrat;
+    font-size: 13px;
+    line-height: 16px;
+    color: $gray-999;
+    font-weight: 400;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 16px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__all {
+    font-family: $font-family-roboto;
+    font-size: 17px;
+    line-height: 20px;
+    color: $gray-333;
+    font-weight: 700;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+
+  &__description {
+    font-family: $font-family-montserrat;
+    line-height: 24px;
+    color: $gray-666;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-top: 23px;
+  }
+}
+
+.swiper-container--staff {
+  //width: 100vw;
+  position: initial;
+  overflow: visible;
+
+  .swiper-wrapper {
+    padding-bottom: 20px;
+  }
+
+  .swiper-slide {
+    background: none;
+    border: none;
+  }
+}
+
+@include phone {
+  .staff {
+
+    &__all span:first-child {
+      font-size: 2px;
+      opacity: 0;
+    }
+
+    &__list {
+
+      .swiper-wrapper {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+

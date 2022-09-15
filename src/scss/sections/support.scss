@@ -1,0 +1,43 @@
+.support {
+  &__content {
+    margin: 30px 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(350px, 1fr));
+    width: 100%;
+    gap: 30px;
+    margin-top: 64px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .card-support {
+    &__label {
+      margin-bottom: 0px;
+
+      img {
+        height: 60px;
+        width: 60px;
+      }
+    }
+
+    &__title {
+      font-size: 60px;
+      line-height: 80px;
+    }
+
+    &__description {
+      font-size: 20px;
+    }
+  }
+}
+
+@include phone {
+
+  .support__list {
+      margin-top: 20px;
+    }
+
+}

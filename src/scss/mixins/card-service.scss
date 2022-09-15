@@ -1,68 +1,7 @@
-.service {
-  &--mobile {
-    display: none;
-  }
-
-  &--desktop {
-    display: flex;
-  }
-
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 33px;
-    width: 100%;
-    margin-top: 50px;
-    position: relative;
-  }
-
-  &__content {
-    margin: 30px 0;
-  }
-
-  &__slogan {
-    font-family: $font-family-montserrat;
-    font-size: 13px;
-    line-height: 16px;
-    color: $gray-999;
-    font-weight: 400;
-  }
-
-  &__header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    margin-top: 16px;
-    align-items: center;
-  }
-
-  &__all {
-    font-family: $font-family-roboto;
-    font-size: 17px;
-    line-height: 20px;
-    color: $gray-333;
-    font-weight: 700;
-    letter-spacing: 0;
-    white-space: nowrap;
-  }
-
-  &__description {
-    font-family: $font-family-montserrat;
-    font-size: 16px;
-    line-height: 24px;
-    color: $gray-666;
-    font-weight: 400;
-    letter-spacing: 0;
-    margin-top: 23px;
-  }
-}
-
 .card-service {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: border-box;
   height: fit-content;
   overflow: hidden;
   justify-content: start;
@@ -165,44 +104,6 @@
       background-color: $blue;
       border-radius: 2px;
       border: 3px solid $extra-gray;
-    }
-  }
-}
-
-.swiper-container--service {
-  width: 100vw;
-  position: relative;
-
-  .swiper-wrapper {
-    height: unset;
-  }
-
-  .card-staff__img {
-
-    img {
-      height: auto;
-    }
-  }
-}
-
-@include phone {
-  .service {
-    &--desktop {
-      display: none;
-    }
-
-    &--mobile {
-      display: flex;
-    }
-    &__all {
-      span:first-child {
-        font-size: 10px;
-        opacity: 0;
-      }
-    }
-
-    &__list {
-      margin-top: 20px;
     }
   }
 }

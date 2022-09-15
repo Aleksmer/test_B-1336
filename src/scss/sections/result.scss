@@ -1,4 +1,3 @@
-
 .result {
   background-color: $light-blue;
 
@@ -51,93 +50,12 @@
     font-weight: 400;
     letter-spacing: 0;
   }
-
-  //.swiper-pagination {
-  //  left: 50%;
-  //  transform: translateX(-50%);
-  //}
-}
-
-.card-result {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  overflow: hidden;
-  justify-content: start;
-  align-items: start;
-  position: relative;
-
-  &__img {
-    min-width: 100%;
-    display: flex;
-    justify-content: center;
-    overflow: auto;
-
-    img {
-      min-width: 100%;
-      object-fit: contain;
-      height: auto;
-      background-color: white;
-      display: flex;
-    }
-  }
-
-  &__gradient {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: linear-gradient(rgba(0, 63, 104, 0), rgba(0, 63, 104, 0.64), rgba(0, 63, 104, 1));
-    opacity: .5;
-  }
-
-  &__info {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    padding: 0 15px 24px 27px;
-    z-index: $z-index-2;
-    opacity: 0.9;
-  }
-
-  &__title {
-    display: flex;
-    color: white;
-    margin-top: 5px;
-  }
 }
 
 .swiper-container--result {
   width: 100vw;
   position: initial;
   padding-bottom: 40px;
-
-  //.swiper-slide {
-  //  background: none;
-  //  border: none;
-  //}
-
-  //.card-result__img {
-  //
-  //  img {
-  //    height: auto;
-  //  }
-  //}
-
-  ///*стрелки*/
-  //.swiper-button-prev,
-  //.swiper-button-next {
-  //  position: absolute;
-  //}
-  //
-  //.swiper-button-next {
-  //  right: 20px;
-  //}
-  //
-  /////*пагинация*/
-  //.swiper-pagination {
-  //  bottom: 13px;
-  //  position: absolute;
-  //}
 }
 
 
@@ -148,7 +66,6 @@
     .swiper-pagination, .swiper-button-prev--result, .swiper-button-next--result {
       display: none;
     }
-
   }
 }
 
