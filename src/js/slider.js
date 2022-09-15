@@ -72,7 +72,7 @@ generateSwiper('service', 20, false, 6, {
   0: {
     slidesPerView: 1,
   },
-  699: {
+  550: {
     slidesPerView: 2,
   }
 })

@@ -13,10 +13,17 @@
   width: 100%;
   margin: 30px 0;
 }
+.card-container {
+  width: 100%;
+  height: 275px;
+  overflow: hidden;
+  background-color: red;
+}
 
 .card-product {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
   width: 100%;
   height: auto;
   overflow: hidden;
@@ -24,15 +31,15 @@
   align-items: start;
   position: relative;
 
-
   &:hover {
     .card-product__info {
       top: 0;
-      padding: 40px 15px 20% 27px;
-      height: 100%;
+      padding: 15px 15px 20% 27px;
+      height: 33%;
       background-color: $aqua;
       opacity: 0.8;
       box-shadow: none;
+      transform: translateY(0);
     }
 
     .card-product__title {
@@ -49,7 +56,9 @@
   }
 
   &__img {
-    min-width: 100%;
+    //min-width: 100%;
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
 
@@ -63,14 +72,16 @@
   }
 
   &__gradient {
+    height: 33%;
     width: 100%;
-    height: 100%;
+    //height: 100%;
     position: absolute;
-    background: linear-gradient(rgba(255, 255, 255, 0), 75%, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 1));
+    background: $white-gradient;
     opacity: .5;
   }
 
   &__info {
+    height: 33%;
     position: absolute;
     width: 100%;
     padding: 0 15px 24px 27px;
@@ -80,6 +91,8 @@
     opacity: 0.9;
     box-shadow: 0 -10px 10px rgba(255, 255, 255, 0.8);
     transition: .5s;
+    transform: translateY(220px);
+    top: 0;
   }
 
   &__title {
@@ -98,13 +111,13 @@
 
   &__description {
     display: flex;
-    height: 95%;
+    height: 85%;
     flex-direction: column;
     font-size: 14px;
     line-height: 18px;
     color: $extra-gray;
     margin-top: 17px;
-    overflow-y: auto;
+    overflow: hidden auto;
     padding-bottom: 24px;
 
     /* W3C standard сейчас только для Firefox */
@@ -140,18 +153,12 @@
     .swiper-container--products {
       padding-bottom: 50px;
     }
+  }
+}
 
-    .swiper-button-prev,
-    .swiper-button-next {
-      top: auto;
-      bottom: 0;
-      right: 30px;
-    }
-
-    .swiper-button-prev {
-      left: auto;
-      right: 70px;
-    }
+@include mini {
+  .card-product__description {
+    height: 80%;
   }
 }
 

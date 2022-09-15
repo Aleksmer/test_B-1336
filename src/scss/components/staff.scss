@@ -66,7 +66,7 @@
     position: initial;
 
     .swiper-wrapper {
-      width: 100vw;
+      padding-bottom: 20px;
     }
 
     .swiper-slide {
@@ -79,31 +79,22 @@
         height: auto;
       }
     }
-
-    .swiper-pagination {
-      bottom: -20px;
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-    }
-
-    .swiper-button-next {
-      right: 20px;
-    }
   }
 }
 
 @include phone {
   .staff {
 
-    //&__list {
-    //  padding-bottom: 20px;
-    //}
-
     &__all span:first-child {
       font-size: 2px;
       opacity: 0;
+    }
+
+    .staff__list {
+
+      .swiper-wrapper {
+        padding-bottom: 0;
+      }
     }
   }
 }

@@ -29,6 +29,7 @@
     justify-content: space-between;
     align-content: center;
     margin-top: 16px;
+    margin-bottom: 20px;
     align-items: center;
   }
 
@@ -49,13 +50,12 @@
     color: $gray-666;
     font-weight: 400;
     letter-spacing: 0;
-    margin-top: 23px;
   }
 
-  .swiper-pagination {
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  //.swiper-pagination {
+  //  left: 50%;
+  //  transform: translateX(-50%);
+  //}
 }
 
 .card-result {
@@ -111,36 +111,33 @@
   position: initial;
   padding-bottom: 40px;
 
-  .swiper-wrapper {
-  }
+  //.swiper-slide {
+  //  background: none;
+  //  border: none;
+  //}
 
-  .swiper-slide {
-    background: none;
-    border: none;
-  }
+  //.card-result__img {
+  //
+  //  img {
+  //    height: auto;
+  //  }
+  //}
 
-  .card-result__img {
-
-    img {
-      height: auto;
-    }
-  }
-
-  /*стрелки*/
-  .swiper-button-prev,
-  .swiper-button-next {
-    position: absolute;
-  }
-
-  .swiper-button-next {
-    right: 20px;
-  }
-
-  ///*пагинация*/
-  .swiper-pagination {
-    bottom: 13px;
-    position: absolute;
-  }
+  ///*стрелки*/
+  //.swiper-button-prev,
+  //.swiper-button-next {
+  //  position: absolute;
+  //}
+  //
+  //.swiper-button-next {
+  //  right: 20px;
+  //}
+  //
+  /////*пагинация*/
+  //.swiper-pagination {
+  //  bottom: 13px;
+  //  position: absolute;
+  //}
 }
 
 
