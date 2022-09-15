@@ -1,12 +1,12 @@
 mixin card-product(img, title, count)
-  .card-container
-    .card-product.swiper-slide
-      .card-product__img
-        img(src=img)
-      .card-product__gradient
-      .card-product__info
-        h5.card-product__title=title
-        h6.card-product__count=count
-          |  товаров
-        h6.card-product__description
-          block
+  //.card-container
+  .card-product.swiper-slide
+    .card-product__img
+      img(src=img)
+    .card-product__gradient
+    .card-product__info
+      h5.card-product__title=title
+      h6.card-product__count=count
+        |  товаров
+      h6.card-product__description
+        block

@@ -13,33 +13,32 @@
   width: 100%;
   margin: 30px 0;
 }
-.card-container {
-  width: 100%;
-  height: 275px;
-  overflow: hidden;
-  background-color: red;
-}
+//.card-container {
+//  width: 100%;
+//  height: 275px;
+//  overflow: hidden;
+//  background-color: red;
+//}
 
 .card-product {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: auto;
+  height: inherit;
   overflow: hidden;
   justify-content: start;
   align-items: start;
   position: relative;
+  background-color: white;
 
   &:hover {
     .card-product__info {
       top: 0;
       padding: 15px 15px 20% 27px;
-      height: 33%;
+      height: 100%;
       background-color: $aqua;
       opacity: 0.8;
       box-shadow: none;
-      transform: translateY(0);
     }
 
     .card-product__title {
@@ -56,43 +55,39 @@
   }
 
   &__img {
-    //min-width: 100%;
-    width: 100%;
-    height: auto;
+    min-width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
 
     img {
-      min-width: 100%;
+      min-width: 80%;
       object-fit: contain;
       height: auto;
       background-color: white;
       display: flex;
+      justify-content: center;
     }
   }
 
   &__gradient {
-    height: 33%;
     width: 100%;
-    //height: 100%;
+    height: 100%;
     position: absolute;
     background: $white-gradient;
     opacity: .5;
   }
 
   &__info {
-    height: 33%;
     position: absolute;
     width: 100%;
     padding: 0 15px 24px 27px;
-    top: 70%;
-    z-index: 2;
+    top: 65%;
+    z-index: $z-index-2;
     background-color: white;
     opacity: 0.9;
     box-shadow: 0 -10px 10px rgba(255, 255, 255, 0.8);
     transition: .5s;
-    transform: translateY(220px);
-    top: 0;
   }
 
   &__title {
@@ -111,7 +106,7 @@
 
   &__description {
     display: flex;
-    height: 85%;
+    height: 90%;
     flex-direction: column;
     font-size: 14px;
     line-height: 18px;
@@ -119,6 +114,7 @@
     margin-top: 17px;
     overflow: hidden auto;
     padding-bottom: 24px;
+    margin-bottom: 10px;
 
     /* W3C standard сейчас только для Firefox */
     scrollbar-width: thin;
@@ -127,18 +123,19 @@
     /* для Chrome/Edge/Safari */
     &::-webkit-scrollbar {
       height: 10px;
-      width: 10px;
+      width: 5px;
     }
 
     &::-webkit-scrollbar-track {
       background: $extra-gray;
-      border-radius: 2px;
+      border-radius: 5px;
+      margin-bottom: 20px;
     }
 
     &::-webkit-scrollbar-thumb {
       background-color: $blue;
-      border-radius: 2px;
-      border: 3px solid $extra-gray;
+      border-radius: 1px;
+      border: 1px solid $extra-gray;
     }
   }
 }

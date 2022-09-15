@@ -1,7 +1,7 @@
 .firstscreen {
   width: auto;
   height: 100%;
-  z-index: 1;
+  z-index: $z-index-1;
 }
 
 .swiper-container--firstscreen {
@@ -68,7 +68,7 @@
     height: auto;
     transform: translate(-50%, 320px);
     display: flex;
-    z-index: 999;
+    z-index: $z-index-2;
     left: 50%;
     top: 0;
   }
